@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDemoMain", "WpfDemoMain\WpfDemoMain.csproj", "{9D3E55D2-6A66-4071-9181-4AB237272E37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{8D474B83-2416-4588-AF4F-81D4A2931643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDemo.Data", "Data\WpfDemo.Data\WpfDemo.Data.csproj", "{084DCD87-A696-45B1-B47A-40F68619ED73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D3E55D2-6A66-4071-9181-4AB237272E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D3E55D2-6A66-4071-9181-4AB237272E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D3E55D2-6A66-4071-9181-4AB237272E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D3E55D2-6A66-4071-9181-4AB237272E37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{084DCD87-A696-45B1-B47A-40F68619ED73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{084DCD87-A696-45B1-B47A-40F68619ED73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{084DCD87-A696-45B1-B47A-40F68619ED73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{084DCD87-A696-45B1-B47A-40F68619ED73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{084DCD87-A696-45B1-B47A-40F68619ED73} = {8D474B83-2416-4588-AF4F-81D4A2931643}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81040579-8BAA-4AA6-A20C-36A1B08ACE50}
+	EndGlobalSection
+EndGlobal
