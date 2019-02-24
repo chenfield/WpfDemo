@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{A57D28
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDemo.Common", "Shared\WpfDemo.Common\WpfDemo.Common.csproj", "{8935AABE-334B-4A0C-827B-E0B550FE5714}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{52BAD88F-6FA8-4D03-9046-5F808457C9AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDemo.UI.User", "Presentation\WpfDemo.UI.User\WpfDemo.UI.User.csproj", "{4EF51BA9-0E43-4F46-87FD-A8FC4684C383}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,10 @@ Global
 		{8935AABE-334B-4A0C-827B-E0B550FE5714}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8935AABE-334B-4A0C-827B-E0B550FE5714}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8935AABE-334B-4A0C-827B-E0B550FE5714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EF51BA9-0E43-4F46-87FD-A8FC4684C383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF51BA9-0E43-4F46-87FD-A8FC4684C383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF51BA9-0E43-4F46-87FD-A8FC4684C383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF51BA9-0E43-4F46-87FD-A8FC4684C383}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +62,7 @@ Global
 		{3DE52AE6-B6B5-4840-9B1B-79EA9EB9784F} = {8D474B83-2416-4588-AF4F-81D4A2931643}
 		{9A2B3733-2E8C-4FC5-8972-DC5F67AA9AF3} = {19D6F723-C62B-4CA9-9BF0-13FC0FE78009}
 		{8935AABE-334B-4A0C-827B-E0B550FE5714} = {A57D28FE-266C-4A19-AFBF-587FA068C5FF}
+		{4EF51BA9-0E43-4F46-87FD-A8FC4684C383} = {52BAD88F-6FA8-4D03-9046-5F808457C9AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81040579-8BAA-4AA6-A20C-36A1B08ACE50}

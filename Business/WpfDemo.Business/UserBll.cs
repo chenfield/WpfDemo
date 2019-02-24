@@ -20,5 +20,14 @@ namespace WpfDemo.Business
         {
             dal.Add(user);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public List<User> GetUsers()
+        {
+            return dal.GetUsers();
+        }
     }
 }

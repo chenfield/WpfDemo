@@ -22,5 +22,21 @@ namespace WpfDemo.Data
                 context.SaveChanges();
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public List<User> GetUsers()
+        {
+            var items = new List<User>();
+
+            using (EF6Context context = new EF6Context())
+            {
+                items = context.Users.ToList();
+            }
+
+            return items;
+        }
     }
 }

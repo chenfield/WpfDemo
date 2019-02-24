@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WpfDemo.Entities
 {
-    //[Table("User")]
+    [Table("User")]
     public class User
     {
         public enum TestENUM : long { A, B, C };
