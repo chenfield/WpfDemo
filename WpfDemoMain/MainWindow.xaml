@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button Height="25" Width="120" Content="Add" Command="{Binding AddCommand}"></Button>
     </Grid>
 </Window>

@@ -1,0 +1,14 @@
+C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Business.dll
+C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Business.pdb
+C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Data.dll
+C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Entities.dll
+C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\EntityFramework.dll
+C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Data.pdb
+C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Data.dll.config
+C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Entities.pdb
+C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\EntityFramework.xml
+C:\pro\WpfDemo\Business\WpfDemo.Business\obj\Debug\WpfDemo.Business.csprojAssemblyReference.cache
+C:\pro\WpfDemo\Business\WpfDemo.Business\obj\Debug\WpfDemo.Business.csproj.CoreCompileInputs.cache
+C:\pro\WpfDemo\Business\WpfDemo.Business\obj\Debug\WpfDemo.Business.csproj.CopyComplete
+C:\pro\WpfDemo\Business\WpfDemo.Business\obj\Debug\WpfDemo.Business.dll
+C:\pro\WpfDemo\Business\WpfDemo.Business\obj\Debug\WpfDemo.Business.pdb

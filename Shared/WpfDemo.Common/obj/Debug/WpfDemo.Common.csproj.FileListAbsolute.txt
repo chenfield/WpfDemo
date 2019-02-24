@@ -1,0 +1,5 @@
+C:\pro\WpfDemo\Shared\WpfDemo.Common\bin\Debug\WpfDemo.Common.dll
+C:\pro\WpfDemo\Shared\WpfDemo.Common\bin\Debug\WpfDemo.Common.pdb
+C:\pro\WpfDemo\Shared\WpfDemo.Common\obj\Debug\WpfDemo.Common.csproj.CoreCompileInputs.cache
+C:\pro\WpfDemo\Shared\WpfDemo.Common\obj\Debug\WpfDemo.Common.dll
+C:\pro\WpfDemo\Shared\WpfDemo.Common\obj\Debug\WpfDemo.Common.pdb
