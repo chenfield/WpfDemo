@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace WpfDemo.Data
     /// <summary>
     /// 数据层注册类
     /// </summary>
+    [Export(typeof(IModule))]
     public class ModuleDataConfiguration : Module
     {
         protected override void Load(ContainerBuilder builder)

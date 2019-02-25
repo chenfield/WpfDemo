@@ -19,18 +19,6 @@ namespace WpfDemo.UI.User
 
         public void Initialize()
         {
-            var builder = new ContainerBuilder();
-
-            var assembly = typeof(ModuleDataConfiguration).Assembly;
-            var assembly1 = typeof(ModuleBusinessConfiguration).Assembly;
-
-            // 只注册AModule 不会注册 BModule
-            builder.RegisterAssemblyModules(typeof(ModuleDataConfiguration), assembly);
-            builder.RegisterAssemblyModules(typeof(ModuleBusinessConfiguration), assembly1);
-
-            //builder.RegisterModule(new ModuleDataConfiguration());
-            //builder.RegisterModule(new ModuleBusinessConfiguration());
-            builder.Build();
             RegionManager.RegisterViewWithRegion("MainRegion", () => _viewModel.View);
         }
     }

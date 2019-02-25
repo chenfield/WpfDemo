@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.Composition;
 using Autofac;
-using Prism.Mef.Modularity;
+using Autofac.Core;
 
 namespace WpfDemo.Business
 {
     /// <summary>
     /// 业务层注册类
     /// </summary>
+    [Export(typeof(IModule))]
     public class ModuleBusinessConfiguration : Module
     {
         protected override void Load(ContainerBuilder builder)
