@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using WpfDemo.Entities;
+using System.ComponentModel.Composition;
 
 namespace WpfDemo.Data
 {
     /// <summary>
     /// 用户数据操作类 
     /// </summary>
+    [Export(typeof(IUserDal))]
     public class UserDal : IUserDal
     {
         /// <summary>

@@ -49,3 +49,16 @@ D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Data\bin\Debug\Microsoft.Practices.Se
 D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.xml
 D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.Mef.Wpf.xml
 D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.Wpf.xml
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Autofac.dll
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.dll
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.Mef.Wpf.dll
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.Wpf.dll
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\System.Windows.Interactivity.dll
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Autofac.pdb
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Autofac.xml
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.xml
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.Mef.Wpf.xml
+C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.Wpf.xml

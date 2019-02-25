@@ -5,6 +5,7 @@ using Prism.Autofac;
 using Prism.Modularity;
 using WpfDemo.Business;
 using WpfDemo.Data;
+using WpfDemo.UI.User;
 
 namespace WpfDemoMain
 {
@@ -13,9 +14,11 @@ namespace WpfDemoMain
         protected override void ConfigureContainerBuilder(ContainerBuilder builder)
         {
             base.ConfigureContainerBuilder(builder);
-            builder.RegisterType<Shell>();
+            builder.RegisterType<Shell>().As<IShellView>();
+            builder.RegisterType<ShellViewModel>().As<IShellViewModel>();
 
             // register autofac module
+            builder.RegisterModule<ModuleUserConfig>();
             builder.RegisterModule<ModuleDataConfiguration>();
             builder.RegisterModule<ModuleBusinessConfiguration>();
         }
@@ -29,7 +32,7 @@ namespace WpfDemoMain
 
         protected override DependencyObject CreateShell()
         {
-            return Container.Resolve<Shell>();
+            return (DependencyObject)Container.Resolve<IShellViewModel>().View;
         }
 
         protected override void InitializeShell()

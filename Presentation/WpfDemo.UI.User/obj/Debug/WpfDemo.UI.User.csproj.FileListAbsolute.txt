@@ -19,10 +19,8 @@ C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Entities.pdb
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Common.pdb
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Autofac.pdb
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Autofac.xml
-C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.pdb
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.xml
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Mef.Wpf.xml
-C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Wpf.pdb
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Wpf.xml
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Data.pdb
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Data.dll.config
@@ -75,3 +73,8 @@ D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.UI.User.dll.config
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\CommonServiceLocator.dll
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Autofac.pdb
+C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.UI.User.dll.config
+C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\CommonServiceLocator.dll
+C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Autofac.Wpf.dll
+C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Autofac.Wpf.xml
+C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Autofac.Wpf.dll.config

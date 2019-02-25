@@ -15,6 +15,11 @@ namespace WpfDemoMain
         {
             base.ConfigureAggregateCatalog();
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(MefBootstrapper).Assembly));
+
+            //DirectoryCatalog catalog = new DirectoryCatalog("DirectoryModules");
+
+            //this.AggregateCatalog.Catalogs.Add(catalog);
+            //AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ModuleUser).Assembly));
         }
 
         protected override void ConfigureContainer()
@@ -22,6 +27,15 @@ namespace WpfDemoMain
             base.ConfigureContainer();
         }
 
+        //protected override IModuleCatalog CreateModuleCatalog()
+
+        //{
+
+        //    // When using MEF, the existing Prism ModuleCatalog is still the place to configure modules via configuration files.
+
+        //    return new ConfigurationModuleCatalog();
+
+        //}
         protected override IModuleCatalog CreateModuleCatalog()
         {
             var uri = new Uri("/WpfDemoMain;Component/ModulesCatalog.xaml", UriKind.Relative);

@@ -5,23 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using WpfDemo.Entities;
 using WpfDemo.Data;
+using System.ComponentModel.Composition;
 
 namespace WpfDemo.Business
 {
     /// <summary>
     /// 用户业务类
     /// </summary>
+    [Export(typeof(IUserBll))]
     public class UserBll : IUserBll
     {
         /// <summary>
         /// 用户数据类接口
         /// </summary>
-        private readonly IUserDal _userDal;
+        private IUserDal _userDal;
 
         /// <summary>
         /// 用户业务类初始化
         /// </summary>
         /// <param name="userDal"></param>
+
+        [ImportingConstructor]
         public UserBll(IUserDal userDal)
         {
             _userDal = userDal;

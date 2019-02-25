@@ -34,7 +34,8 @@ namespace WpfDemo.UI.User
         /// <summary>
         /// 用户业务类实例
         /// </summary>
-        private readonly IUserBll _userBll;
+        //[Import]
+        public IUserBll _userBll;
 
         /// <summary>
         /// 
@@ -69,6 +70,8 @@ namespace WpfDemo.UI.User
         private void Add_Command()
         {
             _userBll.Add(new Entities.User(){Name = "First"});
+
+            UserItems = new ObservableCollection<Entities.User>(_userBll.GetList());
         }
     }
 }

@@ -79,6 +79,7 @@
     <Compile Include="IUserListView.cs" />
     <Compile Include="IUserListViewModel.cs" />
     <Compile Include="ModuleUser.cs" />
+    <Compile Include="ModuleUserConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

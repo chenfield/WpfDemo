@@ -15,7 +15,6 @@ C:\pro\WpfDemo\WpfDemoMain\bin\Debug\EntityFramework.xml
 C:\pro\WpfDemo\WpfDemoMain\obj\Debug\WpfDemoMain.csprojAssemblyReference.cache
 C:\pro\WpfDemo\WpfDemoMain\obj\Debug\App.g.cs
 C:\pro\WpfDemo\WpfDemoMain\obj\Debug\WpfDemoMain_MarkupCompile.cache
-C:\pro\WpfDemo\WpfDemoMain\obj\Debug\WpfDemoMain_MarkupCompile.lref
 C:\pro\WpfDemo\WpfDemoMain\obj\Debug\WpfDemoMain.g.resources
 C:\pro\WpfDemo\WpfDemoMain\obj\Debug\WpfDemoMain.Properties.Resources.resources
 C:\pro\WpfDemo\WpfDemoMain\obj\Debug\WpfDemoMain.csproj.GenerateResource.cache
@@ -29,10 +28,8 @@ C:\pro\WpfDemo\WpfDemoMain\bin\Debug\EntityFramework.SqlServer.xml
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\System.Data.SQLite.dll
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\System.Data.SQLite.xml
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\System.Data.SQLite.dll.config
-C:\pro\WpfDemo\WpfDemoMain\obj\Debug\ModulesCatalog.baml
 C:\pro\WpfDemo\WpfDemoMain\obj\Debug\Shell.g.cs
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Autofac.dll
-C:\pro\WpfDemo\WpfDemoMain\bin\Debug\CommonServiceLocator.dll
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Prism.Autofac.Wpf.dll
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Prism.dll
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Prism.Mef.Wpf.dll
@@ -42,12 +39,9 @@ C:\pro\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.UI.User.dll
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.UI.User.pdb
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Autofac.pdb
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Autofac.xml
-C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Prism.pdb
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Prism.xml
-C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Prism.Autofac.Wpf.pdb
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Prism.Autofac.Wpf.xml
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Prism.Mef.Wpf.xml
-C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Prism.Wpf.pdb
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Prism.Wpf.xml
 C:\pro\WpfDemo\WpfDemoMain\obj\Debug\Shell.baml
 D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\WpfDemoMain.exe.config
@@ -101,3 +95,8 @@ D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\Prism.Autofac.Wpf.dll.config
 D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\pro\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.UI.User.dll.config
+C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Prism.Autofac.Wpf.dll.config
