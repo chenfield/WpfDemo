@@ -32,10 +32,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Prism">
-      <HintPath>..\..\packages\Prism.Core.7.1.0.431\lib\net45\Prism.dll</HintPath>
+      <HintPath>..\..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Mef.Wpf">
+      <HintPath>..\..\packages\Prism.Mef.6.3.0\lib\net45\Prism.Mef.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Prism.Wpf">
-      <HintPath>..\..\packages\Prism.Wpf.7.1.0.431\lib\net45\Prism.Wpf.dll</HintPath>
+      <HintPath>..\..\packages\Prism.Wpf.6.3.0\lib\net45\Prism.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />

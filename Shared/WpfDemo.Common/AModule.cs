@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.Composition;
 using Prism.Events;
+using Prism.Modularity;
 using Prism.Regions;
 
 namespace WpfDemo.Common

@@ -31,12 +31,6 @@
             </summary>
             <value>The shell user interface.</value>
         </member>
-        <member name="M:Prism.Bootstrapper.CreateContainerExtension">
-            <summary>
-            Creates the container extension used by Prism.
-            </summary>
-            <returns>The container extension</returns>
-        </member>
         <member name="M:Prism.Bootstrapper.CreateLogger">
             <summary>
             Create the <see cref="T:Prism.Logging.ILoggerFacade" /> used by the bootstrapper.
@@ -120,12 +114,158 @@
         </member>
         <member name="M:Prism.Bootstrapper.ConfigureServiceLocator">
             <summary>
-            Configures the LocatorProvider for the <see cref="!:Microsoft.Practices.ServiceLocation.ServiceLocator" />.
+            Configures the LocatorProvider for the <see cref="T:Microsoft.Practices.ServiceLocation.ServiceLocator" />.
             </summary>
         </member>
-        <member name="M:Prism.Bootstrapper.OnInitialized">
+        <member name="T:Prism.Common.ListDictionary`2">
             <summary>
-            Contains actions that should occur last.
+            A dictionary of lists.
+            </summary>
+            <typeparam name="TKey">The key to use for lists.</typeparam>
+            <typeparam name="TValue">The type of the value held by lists.</typeparam>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.Add(`0)">
+            <summary>
+            If a list does not already exist, it will be created automatically.
+            </summary>
+            <param name="key">The key of the list that will hold the value.</param>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.Add(`0,`1)">
+            <summary>
+            Adds a value to a list with the given key. If a list does not already exist,
+            it will be created automatically.
+            </summary>
+            <param name="key">The key of the list that will hold the value.</param>
+            <param name="value">The value to add to the list under the given key.</param>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.Clear">
+            <summary>
+            Removes all entries in the dictionary.
+            </summary>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.ContainsValue(`1)">
+            <summary>
+            Determines whether the dictionary contains the specified value.
+            </summary>
+            <param name="value">The value to locate.</param>
+            <returns>true if the dictionary contains the value in any list; otherwise, false.</returns>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.ContainsKey(`0)">
+            <summary>
+            Determines whether the dictionary contains the given key.
+            </summary>
+            <param name="key">The key to locate.</param>
+            <returns>true if the dictionary contains the given key; otherwise, false.</returns>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.FindAllValuesByKey(System.Predicate{`0})">
+            <summary>
+            Retrieves the all the elements from the list which have a key that matches the condition
+            defined by the specified predicate.
+            </summary>
+            <param name="keyFilter">The filter with the condition to use to filter lists by their key.</param>
+            <returns>The elements that have a key that matches the condition defined by the specified predicate.</returns>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.FindAllValues(System.Predicate{`1})">
+            <summary>
+            Retrieves all the elements that match the condition defined by the specified predicate.
+            </summary>
+            <param name="valueFilter">The filter with the condition to use to filter values.</param>
+            <returns>The elements that match the condition defined by the specified predicate.</returns>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.Remove(`0)">
+            <summary>
+            Removes a list by key.
+            </summary>
+            <param name="key">The key of the list to remove.</param>
+            <returns><see langword="true" /> if the element was removed.</returns>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.Remove(`0,`1)">
+            <summary>
+            Removes a value from the list with the given key.
+            </summary>
+            <param name="key">The key of the list where the value exists.</param>
+            <param name="value">The value to remove.</param>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.Remove(`1)">
+            <summary>
+            Removes a value from all lists where it may be found.
+            </summary>
+            <param name="value">The value to remove.</param>
+        </member>
+        <member name="P:Prism.Common.ListDictionary`2.Values">
+            <summary>
+            Gets a shallow copy of all values in all lists.
+            </summary>
+            <value>List of values.</value>
+        </member>
+        <member name="P:Prism.Common.ListDictionary`2.Keys">
+            <summary>
+            Gets the list of keys in the dictionary.
+            </summary>
+            <value>Collection of keys.</value>
+        </member>
+        <member name="P:Prism.Common.ListDictionary`2.Item(`0)">
+            <summary>
+            Gets or sets the list associated with the given key. The
+            access always succeeds, eventually returning an empty list.
+            </summary>
+            <param name="key">The key of the list to access.</param>
+            <returns>The list associated with the key.</returns>
+        </member>
+        <member name="P:Prism.Common.ListDictionary`2.Count">
+            <summary>
+            Gets the number of lists in the dictionary.
+            </summary>
+            <value>Value indicating the values count.</value>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.System#Collections#Generic#IDictionary{TKey,System#Collections#Generic#IList{TValue}}#Add(`0,System.Collections.Generic.IList{`1})">
+            <summary>
+            See <see cref="M:System.Collections.Generic.IDictionary`2.Add(`0,`1)"/> for more information.
+            </summary>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.System#Collections#Generic#IDictionary{TKey,System#Collections#Generic#IList{TValue}}#TryGetValue(`0,System.Collections.Generic.IList{`1}@)">
+            <summary>
+            See <see cref="M:System.Collections.Generic.IDictionary`2.TryGetValue(`0,`1@)"/> for more information.
+            </summary>
+        </member>
+        <member name="P:Prism.Common.ListDictionary`2.System#Collections#Generic#IDictionary{TKey,System#Collections#Generic#IList{TValue}}#Values">
+            <summary>
+            See <see cref="P:System.Collections.Generic.IDictionary`2.Values"/> for more information.
+            </summary>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,System#Collections#Generic#IList{TValue}}}#Add(System.Collections.Generic.KeyValuePair{`0,System.Collections.Generic.IList{`1}})">
+            <summary>
+            See <see cref="M:System.Collections.Generic.ICollection`1.Add(`0)"/> for more information.
+            </summary>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,System#Collections#Generic#IList{TValue}}}#Contains(System.Collections.Generic.KeyValuePair{`0,System.Collections.Generic.IList{`1}})">
+            <summary>
+            See <see cref="M:System.Collections.Generic.ICollection`1.Contains(`0)"/> for more information.
+            </summary>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,System#Collections#Generic#IList{TValue}}}#CopyTo(System.Collections.Generic.KeyValuePair{`0,System.Collections.Generic.IList{`1}}[],System.Int32)">
+            <summary>
+            See <see cref="M:System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)"/> for more information.
+            </summary>
+        </member>
+        <member name="P:Prism.Common.ListDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,System#Collections#Generic#IList{TValue}}}#IsReadOnly">
+            <summary>
+            See <see cref="P:System.Collections.Generic.ICollection`1.IsReadOnly"/> for more information.
+            </summary>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,System#Collections#Generic#IList{TValue}}}#Remove(System.Collections.Generic.KeyValuePair{`0,System.Collections.Generic.IList{`1}})">
+            <summary>
+            See <see cref="M:System.Collections.Generic.ICollection`1.Remove(`0)"/> for more information.
+            </summary>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{TKey,System#Collections#Generic#IList{TValue}}}#GetEnumerator">
+            <summary>
+            See <see cref="M:System.Collections.Generic.IEnumerable`1.GetEnumerator"/> for more information.
+            </summary>
+        </member>
+        <member name="M:Prism.Common.ListDictionary`2.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            See <see cref="M:System.Collections.IEnumerable.GetEnumerator"/> for more information.
             </summary>
         </member>
         <member name="T:Prism.Common.ObservableObject`1">
@@ -604,31 +744,6 @@
             <param name="notification">The INotification or IConfirmation parameter to show.</param>
             <returns></returns>
         </member>
-        <member name="M:Prism.Ioc.IContainerRegistryExtensions.RegisterForNavigation(Prism.Ioc.IContainerRegistry,System.Type,System.String)">
-            <summary>
-            Registers an object for navigation
-            </summary>
-            <param name="containerRegistry"></param>
-            <param name="type">The type of object to register</param>
-            <param name="name">The unique name to register with the obect.</param>
-        </member>
-        <member name="M:Prism.Ioc.IContainerRegistryExtensions.RegisterForNavigation``1(Prism.Ioc.IContainerRegistry,System.String)">
-            <summary>
-            Registers an object for navigation.
-            </summary>
-            <typeparam name="T">The Type of the object to register as the view</typeparam>
-            <param name="containerRegistry"></param>
-            <param name="name">The unique name to register with the object.</param>
-        </member>
-        <member name="M:Prism.Ioc.IContainerRegistryExtensions.RegisterForNavigation``2(Prism.Ioc.IContainerRegistry,System.String)">
-            <summary>
-            Registers an object for navigation with the ViewModel type to be used as the DataContext.
-            </summary>
-            <typeparam name="TView">The Type of object to register as the view</typeparam>
-            <typeparam name="TViewModel">The ViewModel to use as the DataContext for the view</typeparam>
-            <param name="containerRegistry"></param>
-            <param name="name">The unique name to register with the view</param>
-        </member>
         <member name="T:Prism.Logging.TextLogger">
             <summary>
             Implementation of <see cref="T:Prism.Logging.ILoggerFacade"/> that logs into a <see cref="T:System.IO.TextWriter"/>.
@@ -639,6 +754,12 @@
             Initializes a new instance of <see cref="T:Prism.Logging.TextLogger"/> that writes to
             the console output.
             </summary>
+        </member>
+        <member name="M:Prism.Logging.TextLogger.#ctor(System.IO.TextWriter)">
+            <summary>
+            Initializes a new instance of <see cref="T:Prism.Logging.TextLogger"/>.
+            </summary>
+            <param name="writer">The writer to use for writing log entries.</param>
         </member>
         <member name="M:Prism.Logging.TextLogger.Log(System.String,Prism.Logging.Category,Prism.Logging.Priority)">
             <summary>
@@ -732,6 +853,49 @@
             </summary>
             <returns>A <see cref="T:Prism.Modularity.ModulesConfigurationSection"/> instance.</returns>
         </member>
+        <member name="T:Prism.Modularity.CyclicDependencyFoundException">
+            <summary>
+            Represents the exception that is thrown when there is a circular dependency
+            between modules during the module loading process.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.CyclicDependencyFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.CyclicDependencyFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.CyclicDependencyFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.CyclicDependencyFoundException"/> class
+            with the specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Prism.Modularity.CyclicDependencyFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.CyclicDependencyFoundException"/> class
+            with the specified error message and inner exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="M:Prism.Modularity.CyclicDependencyFoundException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes the exception with a particular module, error message and inner exception that happened.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, 
+            or a <see langword="null"/> reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Prism.Modularity.CyclicDependencyFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.CyclicDependencyFoundException"/> class
+            with the serialization data.
+            </summary>
+            <param name="info">Holds the serialized object data about the exception being thrown.</param>
+            <param name="context">Contains contextual information about the source or destination.</param>
+        </member>
         <member name="T:Prism.Modularity.DirectoryModuleCatalog">
              <summary>
              Represets a catalog created from a directory on disk.
@@ -772,6 +936,52 @@
             </remarks>
             <exception cref="T:System.ArgumentNullException">An <see cref="T:System.ArgumentNullException"/> is thrown if <paramref name="parentDomain"/> is null.</exception>
         </member>
+        <member name="T:Prism.Modularity.DuplicateModuleException">
+            <summary>
+            Exception thrown when a module is declared twice in the same catalog.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.DuplicateModuleException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.DuplicateModuleException"/> class.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.DuplicateModuleException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.DuplicateModuleException"/> class.
+            </summary>
+            <param name="message">The exception message.</param>
+        </member>
+        <member name="M:Prism.Modularity.DuplicateModuleException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.DuplicateModuleException"/> class.
+            </summary>
+            <param name="message">The exception message.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="M:Prism.Modularity.DuplicateModuleException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.DuplicateModuleException" /> class with a specified error message.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Prism.Modularity.DuplicateModuleException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.DuplicateModuleException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:Prism.Modularity.DuplicateModuleException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.DuplicateModuleException"/> class
+            with the serialization data.
+            </summary>
+            <param name="info">Holds the serialized object data about the exception being thrown.</param>
+            <param name="context">Contains contextual information about the source or destination.</param>
+        </member>
         <member name="T:Prism.Modularity.FileModuleTypeLoader">
             <summary>
             Loads modules from an arbitrary location on the filesystem. This typeloader is only called if
@@ -800,10 +1010,10 @@
             Raised when a module is loaded or fails to load.
             </summary>
         </member>
-        <member name="M:Prism.Modularity.FileModuleTypeLoader.CanLoadModuleType(Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.FileModuleTypeLoader.CanLoadModuleType(Prism.Modularity.ModuleInfo)">
             <summary>
-            Evaluates the <see cref="P:Prism.Modularity.IModuleInfo.Ref"/> property to see if the current typeloader will be able to retrieve the <paramref name="moduleInfo"/>.
-            Returns true if the <see cref="P:Prism.Modularity.IModuleInfo.Ref"/> property starts with "file://", because this indicates that the file
+            Evaluates the <see cref="P:Prism.Modularity.ModuleInfo.Ref"/> property to see if the current typeloader will be able to retrieve the <paramref name="moduleInfo"/>.
+            Returns true if the <see cref="P:Prism.Modularity.ModuleInfo.Ref"/> property starts with "file://", because this indicates that the file
             is a local file.
             </summary>
             <param name="moduleInfo">Module that should have it's type loaded.</param>
@@ -812,7 +1022,7 @@
             </returns>
             <exception cref="T:System.ArgumentNullException">An <see cref="T:System.ArgumentNullException"/> is thrown if <paramref name="moduleInfo"/> is null.</exception>
         </member>
-        <member name="M:Prism.Modularity.FileModuleTypeLoader.LoadModuleType(Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.FileModuleTypeLoader.LoadModuleType(Prism.Modularity.ModuleInfo)">
             <summary>
             Retrieves the <paramref name="moduleInfo"/>.
             </summary>
@@ -853,113 +1063,115 @@
             </summary>
             <returns>A <see cref="T:Prism.Modularity.ModulesConfigurationSection"/> instance.</returns>
         </member>
-        <member name="M:Prism.Modularity.IModuleCatalogExtensions.AddModule``1(Prism.Modularity.IModuleCatalog,Prism.Modularity.InitializationMode,System.String[])">
+        <member name="T:Prism.Modularity.IModule">
             <summary>
-            Adds the module.
+            Defines the contract for the modules deployed in the application.
             </summary>
-            <returns>The module.</returns>
-            <param name="catalog">Catalog</param>
-            <param name="mode"><see cref="T:Prism.Modularity.InitializationMode"/></param>
-            <typeparam name="T">The <see cref="T:Prism.Modularity.IModule"/> type parameter.</typeparam>
         </member>
-        <member name="M:Prism.Modularity.IModuleCatalogExtensions.AddModule``1(Prism.Modularity.IModuleCatalog,System.String,Prism.Modularity.InitializationMode,System.String[])">
+        <member name="M:Prism.Modularity.IModule.Initialize">
             <summary>
-            Adds the module.
+            Notifies the module that it has be initialized.
             </summary>
-            <returns>The module.</returns>
-            <param name="catalog">Catalog.</param>
-            <param name="name">Name.</param>
-            <param name="mode"><see cref="T:Prism.Modularity.IModule"/>.</param>
-            <typeparam name="T">The <see cref="T:Prism.Modularity.IModule"/> type parameter.</typeparam>
         </member>
-        <member name="M:Prism.Modularity.IModuleCatalogExtensions.AddModule(Prism.Modularity.IModuleCatalog,System.Type,System.String[])">
+        <member name="T:Prism.Modularity.IModuleCatalog">
             <summary>
-            Adds a groupless <see cref="T:Prism.Modularity.IModuleInfo"/> to the catalog.
+            This is the expected catalog definition for the ModuleManager. 
+            The ModuleCatalog holds information about the modules that can be used by the 
+            application. Each module is described in a ModuleInfo class, that records the 
+            name, type and location of the module. 
             </summary>
-            <param name="moduleType"><see cref="T:System.Type"/> of the module to be added.</param>
-            <param name="dependsOn">Collection of module names (<see cref="P:Prism.Modularity.IModuleInfo.ModuleName"/>) of the modules on which the module to be added logically depends on.</param>
-            <returns>The same <see cref="T:Prism.Modularity.IModuleCatalog"/> instance with the added module.</returns>
         </member>
-        <member name="M:Prism.Modularity.IModuleCatalogExtensions.AddModule(Prism.Modularity.IModuleCatalog,System.Type,Prism.Modularity.InitializationMode,System.String[])">
+        <member name="P:Prism.Modularity.IModuleCatalog.Modules">
             <summary>
-            Adds a groupless <see cref="T:Prism.Modularity.IModuleInfo"/> to the catalog.
+            Gets all the <see cref="T:Prism.Modularity.ModuleInfo"/> classes that are in the <see cref="T:Prism.Modularity.ModuleCatalog"/>.
             </summary>
-            <param name="moduleType"><see cref="T:System.Type"/> of the module to be added.</param>
-            <param name="initializationMode">Stage on which the module to be added will be initialized.</param>
-            <param name="dependsOn">Collection of module names (<see cref="P:Prism.Modularity.IModuleInfo.ModuleName"/>) of the modules on which the module to be added logically depends on.</param>
-            <returns>The same <see cref="T:Prism.Modularity.IModuleCatalog"/> instance with the added module.</returns>
         </member>
-        <member name="M:Prism.Modularity.IModuleCatalogExtensions.AddModule(Prism.Modularity.IModuleCatalog,System.String,System.String,System.String[])">
+        <member name="M:Prism.Modularity.IModuleCatalog.GetDependentModules(Prism.Modularity.ModuleInfo)">
             <summary>
-            Adds a groupless <see cref="T:Prism.Modularity.ModuleInfo"/> to the catalog.
+            Return the list of <see cref="T:Prism.Modularity.ModuleInfo"/>s that <paramref name="moduleInfo"/> depends on.
             </summary>
-            <param name="moduleName">Name of the module to be added.</param>
-            <param name="moduleType"><see cref="T:System.Type"/> of the module to be added.</param>
-            <param name="dependsOn">Collection of module names (<see cref="P:Prism.Modularity.ModuleInfo.ModuleName"/>) of the modules on which the module to be added logically depends on.</param>
-            <returns>The same <see cref="T:Prism.Modularity.ModuleCatalog"/> instance with the added module.</returns>
+            <param name="moduleInfo">The <see cref="T:Prism.Modularity.ModuleInfo"/> to get the </param>
+            <returns>An enumeration of <see cref="T:Prism.Modularity.ModuleInfo"/> that <paramref name="moduleInfo"/> depends on.</returns>
         </member>
-        <member name="M:Prism.Modularity.IModuleCatalogExtensions.AddModule(Prism.Modularity.IModuleCatalog,System.String,System.String,Prism.Modularity.InitializationMode,System.String[])">
+        <member name="M:Prism.Modularity.IModuleCatalog.CompleteListWithDependencies(System.Collections.Generic.IEnumerable{Prism.Modularity.ModuleInfo})">
             <summary>
-            Adds a groupless <see cref="T:Prism.Modularity.ModuleInfo"/> to the catalog.
+            Returns the collection of <see cref="T:Prism.Modularity.ModuleInfo"/>s that contain both the <see cref="T:Prism.Modularity.ModuleInfo"/>s in 
+            <paramref name="modules"/>, but also all the modules they depend on. 
             </summary>
-            <param name="moduleName">Name of the module to be added.</param>
-            <param name="moduleType"><see cref="T:System.Type"/> of the module to be added.</param>
-            <param name="initializationMode">Stage on which the module to be added will be initialized.</param>
-            <param name="dependsOn">Collection of module names (<see cref="P:Prism.Modularity.ModuleInfo.ModuleName"/>) of the modules on which the module to be added logically depends on.</param>
-            <returns>The same <see cref="T:Prism.Modularity.ModuleCatalog"/> instance with the added module.</returns>
+            <param name="modules">The modules to get the dependencies for.</param>
+            <returns>
+            A collection of <see cref="T:Prism.Modularity.ModuleInfo"/> that contains both all <see cref="T:Prism.Modularity.ModuleInfo"/>s in <paramref name="modules"/>
+            and also all the <see cref="T:Prism.Modularity.ModuleInfo"/> they depend on.
+            </returns>
         </member>
-        <member name="M:Prism.Modularity.IModuleCatalogExtensions.AddModule(Prism.Modularity.IModuleCatalog,System.String,System.String,System.String,Prism.Modularity.InitializationMode,System.String[])">
+        <member name="M:Prism.Modularity.IModuleCatalog.Initialize">
             <summary>
-            Adds a groupless <see cref="T:Prism.Modularity.ModuleInfo"/> to the catalog.
+            Initializes the catalog, which may load and validate the modules.
             </summary>
-            <param name="moduleName">Name of the module to be added.</param>
-            <param name="moduleType"><see cref="T:System.Type"/> of the module to be added.</param>
-            <param name="refValue">Reference to the location of the module to be added assembly.</param>
-            <param name="initializationMode">Stage on which the module to be added will be initialized.</param>
-            <param name="dependsOn">Collection of module names (<see cref="P:Prism.Modularity.ModuleInfo.ModuleName"/>) of the modules on which the module to be added logically depends on.</param>
-            <returns>The same <see cref="T:Prism.Modularity.ModuleCatalog"/> instance with the added module.</returns>
         </member>
-        <member name="M:Prism.Modularity.IModuleCatalogExtensions.AddModule``1(Prism.Modularity.IModuleCatalog,Prism.Modularity.InitializationMode)">
+        <member name="M:Prism.Modularity.IModuleCatalog.AddModule(Prism.Modularity.ModuleInfo)">
             <summary>
-            Adds the module.
+            Adds a <see cref="T:Prism.Modularity.ModuleInfo"/> to the <see cref="T:Prism.Modularity.ModuleCatalog"/>.
             </summary>
-            <returns>The module.</returns>
-            <param name="catalog">Catalog</param>
-            <param name="mode"><see cref="T:Prism.Modularity.InitializationMode"/></param>
-            <typeparam name="T">The <see cref="T:Prism.Modularity.IModule"/> type parameter.</typeparam>
+            <param name="moduleInfo">The <see cref="T:Prism.Modularity.ModuleInfo"/> to add.</param>
+            <returns>The <see cref="T:Prism.Modularity.ModuleCatalog"/> for easily adding multiple modules.</returns>
         </member>
-        <member name="M:Prism.Modularity.IModuleCatalogExtensions.AddModule``1(Prism.Modularity.IModuleCatalog,System.String,Prism.Modularity.InitializationMode)">
+        <member name="T:Prism.Modularity.IModuleCatalogItem">
             <summary>
-            Adds the module.
+            Marker interface that allows both <see cref="T:Prism.Modularity.ModuleInfoGroup"/>s and <see cref="T:Prism.Modularity.ModuleInfo"/>s to be
+            added to the <see cref="T:Prism.Modularity.IModuleCatalog"/> from code and XAML. 
             </summary>
-            <returns>The module.</returns>
-            <param name="catalog">Catalog.</param>
-            <param name="name">Name.</param>
-            <param name="mode"><see cref="T:Prism.Modularity.IModule"/>.</param>
-            <typeparam name="T">The <see cref="T:Prism.Modularity.IModule"/> type parameter.</typeparam>
         </member>
-        <member name="M:Prism.Modularity.IModuleCatalogExtensions.AddGroup(Prism.Modularity.IModuleCatalog,Prism.Modularity.InitializationMode,System.String,Prism.Modularity.ModuleInfo[])">
+        <member name="T:Prism.Modularity.IModuleInitializer">
             <summary>
-            Creates and adds a <see cref="T:Prism.Modularity.ModuleInfoGroup"/> to the catalog.
+            Declares a service which initializes the modules into the application.
             </summary>
-            <param name="initializationMode">Stage on which the module group to be added will be initialized.</param>
-            <param name="refValue">Reference to the location of the module group to be added.</param>
-            <param name="moduleInfos">Collection of <see cref="T:Prism.Modularity.ModuleInfo"/> included in the group.</param>
-            <returns><see cref="T:Prism.Modularity.ModuleCatalog"/> with the added module group.</returns>
+        </member>
+        <member name="M:Prism.Modularity.IModuleInitializer.Initialize(Prism.Modularity.ModuleInfo)">
+            <summary>
+            Initializes the specified module.
+            </summary>
+            <param name="moduleInfo">The module to initialize</param>
+        </member>
+        <member name="T:Prism.Modularity.IModuleManager">
+            <summary>
+            Defines the interface for the service that will retrieve and initialize the application's modules.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.IModuleManager.Run">
+            <summary>
+            Initializes the modules marked as <see cref="F:Prism.Modularity.InitializationMode.WhenAvailable"/> on the <see cref="T:Prism.Modularity.ModuleCatalog"/>.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.IModuleManager.LoadModule(System.String)">
+            <summary>
+            Loads and initializes the module on the <see cref="T:Prism.Modularity.ModuleCatalog"/> with the name <paramref name="moduleName"/>.
+            </summary>
+            <param name="moduleName">Name of the module requested for initialization.</param>
+        </member>
+        <member name="E:Prism.Modularity.IModuleManager.ModuleDownloadProgressChanged">
+            <summary>
+            Raised repeatedly to provide progress as modules are downloaded.
+            </summary>
+        </member>
+        <member name="E:Prism.Modularity.IModuleManager.LoadModuleCompleted">
+            <summary>
+            Raised when a module is loaded or fails to load.
+            </summary>
         </member>
         <member name="T:Prism.Modularity.IModuleTypeLoader">
             <summary>
             Defines the interface for moduleTypeLoaders
             </summary>
         </member>
-        <member name="M:Prism.Modularity.IModuleTypeLoader.CanLoadModuleType(Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.IModuleTypeLoader.CanLoadModuleType(Prism.Modularity.ModuleInfo)">
             <summary>
-            Evaluates the <see cref="P:Prism.Modularity.IModuleInfo.Ref"/> property to see if the current typeloader will be able to retrieve the <paramref name="moduleInfo"/>.
+            Evaluates the <see cref="P:Prism.Modularity.ModuleInfo.Ref"/> property to see if the current typeloader will be able to retrieve the <paramref name="moduleInfo"/>.
             </summary>
             <param name="moduleInfo">Module that should have it's type loaded.</param>
             <returns><see langword="true"/> if the current typeloader is able to retrieve the module, otherwise <see langword="false"/>.</returns>
         </member>
-        <member name="M:Prism.Modularity.IModuleTypeLoader.LoadModuleType(Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.IModuleTypeLoader.LoadModuleType(Prism.Modularity.ModuleInfo)">
             <summary>
             Retrieves the <paramref name="moduleInfo"/>.
             </summary>
@@ -975,8 +1187,115 @@
             Raised when a module is loaded or fails to load.
             </summary>
             <remarks>
-            This event is raised once per ModuleInfo instance requested in <see cref="M:Prism.Modularity.IModuleTypeLoader.LoadModuleType(Prism.Modularity.IModuleInfo)"/>.
+            This event is raised once per ModuleInfo instance requested in <see cref="M:Prism.Modularity.IModuleTypeLoader.LoadModuleType(Prism.Modularity.ModuleInfo)"/>.
             </remarks>
+        </member>
+        <member name="T:Prism.Modularity.InitializationMode">
+            <summary>
+            Specifies on which stage the Module group will be initialized.
+            </summary>
+        </member>
+        <member name="F:Prism.Modularity.InitializationMode.WhenAvailable">
+            <summary>
+            The module will be initialized when it is available on application start-up.
+            </summary>
+        </member>
+        <member name="F:Prism.Modularity.InitializationMode.OnDemand">
+            <summary>
+            The module will be initialized when requested, and not automatically on application start-up.
+            </summary>
+        </member>
+        <member name="T:Prism.Modularity.LoadModuleCompletedEventArgs">
+            <summary>
+            Provides completion information after a module is loaded, or fails to load.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.LoadModuleCompletedEventArgs.#ctor(Prism.Modularity.ModuleInfo,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.LoadModuleCompletedEventArgs"/> class.
+            </summary>
+            <param name="moduleInfo">The module info.</param>
+            <param name="error">Any error that occurred during the call.</param>
+        </member>
+        <member name="P:Prism.Modularity.LoadModuleCompletedEventArgs.ModuleInfo">
+            <summary>
+            Gets the module info.
+            </summary>
+            <value>The module info.</value>
+        </member>
+        <member name="P:Prism.Modularity.LoadModuleCompletedEventArgs.Error">
+            <summary>
+            Gets any error that occurred
+            </summary>
+            <value>The exception if an error occurred; otherwise null.</value>
+        </member>
+        <member name="P:Prism.Modularity.LoadModuleCompletedEventArgs.IsErrorHandled">
+            <summary>
+            Gets or sets a value indicating whether the error has been handled by the event subscriber.
+            </summary>
+            <value><c>true</c>if the error is handled; otherwise, <c>false</c>.</value>
+            <remarks>
+            If there is an error on this event and no event subscriber sets this to true, an exception will be thrown by the event publisher.
+            </remarks>
+        </member>
+        <member name="T:Prism.Modularity.ModularityException">
+            <summary>
+            Base class for exceptions that are thrown because of a problem with modules. 
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModularityException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModularityException"/> class.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModularityException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModularityException"/> class.
+            </summary>
+            <param name="message">The exception message.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModularityException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModularityException"/> class.
+            </summary>
+            <param name="message">The exception message.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModularityException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes the exception with a particular module and error message.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModularityException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes the exception with a particular module, error message and inner exception that happened.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, 
+            or a <see langword="null"/> reference if no inner exception is specified.</param>
+        </member>
+        <member name="P:Prism.Modularity.ModularityException.ModuleName">
+            <summary>
+            Gets or sets the name of the module that this exception refers to.
+            </summary>
+            <value>The name of the module.</value>
+        </member>
+        <member name="M:Prism.Modularity.ModularityException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModularityException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the <see cref="T:System.Runtime.Serialization.SerializationInfo"/> with information about the exception.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
         </member>
         <member name="T:Prism.Modularity.ModuleAttribute">
             <summary>
@@ -1028,6 +1347,37 @@
             </summary>
             <param name="modules">The initial list of modules.</param>
         </member>
+        <member name="P:Prism.Modularity.ModuleCatalog.Items">
+            <summary>
+            Gets the items in the <see cref="T:Prism.Modularity.ModuleCatalog"/>. This property is mainly used to add <see cref="T:Prism.Modularity.ModuleInfoGroup"/>s or
+            <see cref="T:Prism.Modularity.ModuleInfo"/>s through XAML.
+            </summary>
+            <value>The items in the catalog.</value>
+        </member>
+        <member name="P:Prism.Modularity.ModuleCatalog.Modules">
+            <summary>
+            Gets all the <see cref="T:Prism.Modularity.ModuleInfo"/> classes that are in the <see cref="T:Prism.Modularity.ModuleCatalog"/>, regardless
+            if they are within a <see cref="T:Prism.Modularity.ModuleInfoGroup"/> or not.
+            </summary>
+            <value>The modules.</value>
+        </member>
+        <member name="P:Prism.Modularity.ModuleCatalog.Groups">
+            <summary>
+            Gets the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>s that have been added to the <see cref="T:Prism.Modularity.ModuleCatalog"/>.
+            </summary>
+            <value>The groups.</value>
+        </member>
+        <member name="P:Prism.Modularity.ModuleCatalog.Validated">
+            <summary>
+            Gets or sets a value that remembers whether the <see cref="T:Prism.Modularity.ModuleCatalog"/> has been validated already.
+            </summary>
+        </member>
+        <member name="P:Prism.Modularity.ModuleCatalog.GrouplessModules">
+            <summary>
+            Returns the list of <see cref="T:Prism.Modularity.ModuleInfo"/>s that are not contained within any <see cref="T:Prism.Modularity.ModuleInfoGroup"/>.
+            </summary>
+            <value>The groupless modules.</value>
+        </member>
         <member name="M:Prism.Modularity.ModuleCatalog.CreateFromXaml(System.IO.Stream)">
             <summary>
             Creates a <see cref="T:Prism.Modularity.ModuleCatalog"/> from XAML.
@@ -1041,6 +1391,179 @@
             </summary>
             <param name="builderResourceUri">Relative <see cref="T:System.Uri"/> that identifies the XAML included as an Application Resource.</param>
             <returns>An instance of <see cref="T:Prism.Modularity.ModuleCatalog"/> build from the XAML.</returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.Load">
+            <summary>
+            Loads the catalog if necessary.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.GetDependentModules(Prism.Modularity.ModuleInfo)">
+            <summary>
+            Return the list of <see cref="T:Prism.Modularity.ModuleInfo"/>s that <paramref name="moduleInfo"/> depends on.
+            </summary>
+            <remarks>
+            If  the <see cref="T:Prism.Modularity.ModuleCatalog"/> was not yet validated, this method will call <see cref="M:Prism.Modularity.ModuleCatalog.Validate"/>.
+            </remarks>
+            <param name="moduleInfo">The <see cref="T:Prism.Modularity.ModuleInfo"/> to get the </param>
+            <returns>An enumeration of <see cref="T:Prism.Modularity.ModuleInfo"/> that <paramref name="moduleInfo"/> depends on.</returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.CompleteListWithDependencies(System.Collections.Generic.IEnumerable{Prism.Modularity.ModuleInfo})">
+            <summary>
+            Returns a list of <see cref="T:Prism.Modularity.ModuleInfo"/>s that contain both the <see cref="T:Prism.Modularity.ModuleInfo"/>s in
+            <paramref name="modules"/>, but also all the modules they depend on.
+            </summary>
+            <param name="modules">The modules to get the dependencies for.</param>
+            <returns>
+            A list of <see cref="T:Prism.Modularity.ModuleInfo"/> that contains both all <see cref="T:Prism.Modularity.ModuleInfo"/>s in <paramref name="modules"/>
+            but also all the <see cref="T:Prism.Modularity.ModuleInfo"/> they depend on.
+            </returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.Validate">
+            <summary>
+            Validates the <see cref="T:Prism.Modularity.ModuleCatalog"/>.
+            </summary>
+            <exception cref="T:Prism.Modularity.ModularityException">When validation of the <see cref="T:Prism.Modularity.ModuleCatalog"/> fails.</exception>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.AddModule(Prism.Modularity.ModuleInfo)">
+            <summary>
+            Adds a <see cref="T:Prism.Modularity.ModuleInfo"/> to the <see cref="T:Prism.Modularity.ModuleCatalog"/>.
+            </summary>
+            <param name="moduleInfo">The <see cref="T:Prism.Modularity.ModuleInfo"/> to add.</param>
+            <returns>The <see cref="T:Prism.Modularity.ModuleCatalog"/> for easily adding multiple modules.</returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.AddModule(System.Type,System.String[])">
+            <summary>
+            Adds a groupless <see cref="T:Prism.Modularity.ModuleInfo"/> to the catalog.
+            </summary>
+            <param name="moduleType"><see cref="T:System.Type"/> of the module to be added.</param>
+            <param name="dependsOn">Collection of module names (<see cref="P:Prism.Modularity.ModuleInfo.ModuleName"/>) of the modules on which the module to be added logically depends on.</param>
+            <returns>The same <see cref="T:Prism.Modularity.ModuleCatalog"/> instance with the added module.</returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.AddModule(System.Type,Prism.Modularity.InitializationMode,System.String[])">
+            <summary>
+            Adds a groupless <see cref="T:Prism.Modularity.ModuleInfo"/> to the catalog.
+            </summary>
+            <param name="moduleType"><see cref="T:System.Type"/> of the module to be added.</param>
+            <param name="initializationMode">Stage on which the module to be added will be initialized.</param>
+            <param name="dependsOn">Collection of module names (<see cref="P:Prism.Modularity.ModuleInfo.ModuleName"/>) of the modules on which the module to be added logically depends on.</param>
+            <returns>The same <see cref="T:Prism.Modularity.ModuleCatalog"/> instance with the added module.</returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.AddModule(System.String,System.String,System.String[])">
+            <summary>
+            Adds a groupless <see cref="T:Prism.Modularity.ModuleInfo"/> to the catalog.
+            </summary>
+            <param name="moduleName">Name of the module to be added.</param>
+            <param name="moduleType"><see cref="T:System.Type"/> of the module to be added.</param>
+            <param name="dependsOn">Collection of module names (<see cref="P:Prism.Modularity.ModuleInfo.ModuleName"/>) of the modules on which the module to be added logically depends on.</param>
+            <returns>The same <see cref="T:Prism.Modularity.ModuleCatalog"/> instance with the added module.</returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.AddModule(System.String,System.String,Prism.Modularity.InitializationMode,System.String[])">
+            <summary>
+            Adds a groupless <see cref="T:Prism.Modularity.ModuleInfo"/> to the catalog.
+            </summary>
+            <param name="moduleName">Name of the module to be added.</param>
+            <param name="moduleType"><see cref="T:System.Type"/> of the module to be added.</param>
+            <param name="initializationMode">Stage on which the module to be added will be initialized.</param>
+            <param name="dependsOn">Collection of module names (<see cref="P:Prism.Modularity.ModuleInfo.ModuleName"/>) of the modules on which the module to be added logically depends on.</param>
+            <returns>The same <see cref="T:Prism.Modularity.ModuleCatalog"/> instance with the added module.</returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.AddModule(System.String,System.String,System.String,Prism.Modularity.InitializationMode,System.String[])">
+            <summary>
+            Adds a groupless <see cref="T:Prism.Modularity.ModuleInfo"/> to the catalog.
+            </summary>
+            <param name="moduleName">Name of the module to be added.</param>
+            <param name="moduleType"><see cref="T:System.Type"/> of the module to be added.</param>
+            <param name="refValue">Reference to the location of the module to be added assembly.</param>
+            <param name="initializationMode">Stage on which the module to be added will be initialized.</param>
+            <param name="dependsOn">Collection of module names (<see cref="P:Prism.Modularity.ModuleInfo.ModuleName"/>) of the modules on which the module to be added logically depends on.</param>
+            <returns>The same <see cref="T:Prism.Modularity.ModuleCatalog"/> instance with the added module.</returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.Initialize">
+            <summary>
+            Initializes the catalog, which may load and validate the modules.
+            </summary>
+            <exception cref="T:Prism.Modularity.ModularityException">When validation of the <see cref="T:Prism.Modularity.ModuleCatalog"/> fails, because this method calls <see cref="M:Prism.Modularity.ModuleCatalog.Validate"/>.</exception>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.AddGroup(Prism.Modularity.InitializationMode,System.String,Prism.Modularity.ModuleInfo[])">
+            <summary>
+            Creates and adds a <see cref="T:Prism.Modularity.ModuleInfoGroup"/> to the catalog.
+            </summary>
+            <param name="initializationMode">Stage on which the module group to be added will be initialized.</param>
+            <param name="refValue">Reference to the location of the module group to be added.</param>
+            <param name="moduleInfos">Collection of <see cref="T:Prism.Modularity.ModuleInfo"/> included in the group.</param>
+            <returns><see cref="T:Prism.Modularity.ModuleCatalog"/> with the added module group.</returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.SolveDependencies(System.Collections.Generic.IEnumerable{Prism.Modularity.ModuleInfo})">
+            <summary>
+            Checks for cyclic dependencies, by calling the dependencysolver.
+            </summary>
+            <param name="modules">the.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.ValidateDependencies(System.Collections.Generic.IEnumerable{Prism.Modularity.ModuleInfo})">
+            <summary>
+            Ensures that all the dependencies within <paramref name="modules"/> refer to <see cref="T:Prism.Modularity.ModuleInfo"/>s
+            within that list.
+            </summary>
+            <param name="modules">The modules to validate modules for.</param>
+            <exception cref="T:Prism.Modularity.ModularityException">
+            Throws if a <see cref="T:Prism.Modularity.ModuleInfo"/> in <paramref name="modules"/> depends on a module that's
+            not in <paramref name="modules"/>.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">Throws if <paramref name="modules"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.InnerLoad">
+            <summary>
+            Does the actual work of loading the catalog.  The base implementation does nothing.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.Sort(System.Collections.Generic.IEnumerable{Prism.Modularity.ModuleInfo})">
+            <summary>
+            Sorts a list of <see cref="T:Prism.Modularity.ModuleInfo"/>s. This method is called by <see cref="M:Prism.Modularity.ModuleCatalog.CompleteListWithDependencies(System.Collections.Generic.IEnumerable{Prism.Modularity.ModuleInfo})"/>
+            to return a sorted list.
+            </summary>
+            <param name="modules">The <see cref="T:Prism.Modularity.ModuleInfo"/>s to sort.</param>
+            <returns>Sorted list of <see cref="T:Prism.Modularity.ModuleInfo"/>s</returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.ValidateUniqueModules">
+            <summary>
+            Makes sure all modules have an Unique name.
+            </summary>
+            <exception cref="T:Prism.Modularity.DuplicateModuleException">
+            Thrown if the names of one or more modules are not unique.
+            </exception>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.ValidateDependencyGraph">
+            <summary>
+            Ensures that there are no cyclic dependencies.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.ValidateCrossGroupDependencies">
+            <summary>
+            Ensures that there are no dependencies between modules on different groups.
+            </summary>
+            <remarks>
+            A groupless module can only depend on other groupless modules.
+            A module within a group can depend on other modules within the same group and/or on groupless modules.
+            </remarks>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.ValidateDependenciesInitializationMode">
+            <summary>
+            Ensures that there are no modules marked to be loaded <see cref="F:Prism.Modularity.InitializationMode.WhenAvailable"/>
+            depending on modules loaded <see cref="F:Prism.Modularity.InitializationMode.OnDemand"/>
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.GetDependentModulesInner(Prism.Modularity.ModuleInfo)">
+            <summary>
+            Returns the <see cref="T:Prism.Modularity.ModuleInfo"/> on which the received module dependens on.
+            </summary>
+            <param name="moduleInfo">Module whose dependant modules are requested.</param>
+            <returns>Collection of <see cref="T:Prism.Modularity.ModuleInfo"/> dependants of <paramref name="moduleInfo"/>.</returns>
+        </member>
+        <member name="M:Prism.Modularity.ModuleCatalog.EnsureCatalogValidated">
+            <summary>
+            Ensures that the catalog is validated.
+            </summary>
         </member>
         <member name="T:Prism.Modularity.ModuleConfigurationElement">
             <summary>
@@ -1174,6 +1697,23 @@
             An <see cref="T:System.Object" /> that acts as the key for the specified <see cref="T:System.Configuration.ConfigurationElement" />.
             </returns>
         </member>
+        <member name="T:Prism.Modularity.ModuleDependencyAttribute">
+            <summary>
+            Specifies that the current module has a dependency on another module. This attribute should be used on classes that implement <see cref="T:Prism.Modularity.IModule"/>.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleDependencyAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Prism.Modularity.ModuleDependencyAttribute"/>.
+            </summary>
+            <param name="moduleName">The name of the module that this module is dependant upon.</param>
+        </member>
+        <member name="P:Prism.Modularity.ModuleDependencyAttribute.ModuleName">
+            <summary>
+            Gets the name of the module that this module is dependant upon.
+            </summary>
+            <value>The name of the module that this module is dependant upon.</value>
+        </member>
         <member name="T:Prism.Modularity.ModuleDependencyCollection">
             <summary>
             A collection of <see cref="T:Prism.Modularity.ModuleDependencyConfigurationElement"/>.
@@ -1250,6 +1790,73 @@
             </summary>
             <value>The name of a module antoher module depends on.</value>
         </member>
+        <member name="T:Prism.Modularity.ModuleDependencySolver">
+            <summary>
+            Used by <see cref="T:Prism.Modularity.ModuleInitializer"/> to get the load sequence
+            for the modules to load according to their dependencies.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleDependencySolver.AddModule(System.String)">
+            <summary>
+            Adds a module to the solver.
+            </summary>
+            <param name="name">The name that uniquely identifies the module.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleDependencySolver.AddDependency(System.String,System.String)">
+            <summary>
+            Adds a module dependency between the modules specified by dependingModule and
+            dependentModule.
+            </summary>
+            <param name="dependingModule">The name of the module with the dependency.</param>
+            <param name="dependentModule">The name of the module dependingModule
+            depends on.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleDependencySolver.Solve">
+            <summary>
+            Calculates an ordered vector according to the defined dependencies.
+            Non-dependant modules appears at the beginning of the resulting array.
+            </summary>
+            <returns>The resulting ordered list of modules.</returns>
+            <exception cref="T:Prism.Modularity.CyclicDependencyFoundException">This exception is thrown
+            when a cycle is found in the defined depedency graph.</exception>
+        </member>
+        <member name="P:Prism.Modularity.ModuleDependencySolver.ModuleCount">
+            <summary>
+            Gets the number of modules added to the solver.
+            </summary>
+            <value>The number of modules.</value>
+        </member>
+        <member name="T:Prism.Modularity.ModuleDownloadProgressChangedEventArgs">
+            <summary>
+            Provides progress information as a module downloads.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleDownloadProgressChangedEventArgs.#ctor(Prism.Modularity.ModuleInfo,System.Int64,System.Int64)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModuleDownloadProgressChangedEventArgs"/> class.
+            </summary>
+            <param name="moduleInfo">The module info.</param>
+            <param name="bytesReceived">The bytes received.</param>
+            <param name="totalBytesToReceive">The total bytes to receive.</param>
+        </member>
+        <member name="P:Prism.Modularity.ModuleDownloadProgressChangedEventArgs.ModuleInfo">
+            <summary>
+            Getsthe module info.
+            </summary>
+            <value>The module info.</value>
+        </member>
+        <member name="P:Prism.Modularity.ModuleDownloadProgressChangedEventArgs.BytesReceived">
+            <summary>
+            Gets the bytes received.
+            </summary>
+            <value>The bytes received.</value>
+        </member>
+        <member name="P:Prism.Modularity.ModuleDownloadProgressChangedEventArgs.TotalBytesToReceive">
+            <summary>
+            Gets the total bytes to receive.
+            </summary>
+            <value>The total bytes to receive.</value>
+        </member>
         <member name="T:Prism.Modularity.ModuleInfo">
             <summary>
             Defines the metadata that describes a module.
@@ -1275,27 +1882,6 @@
             </summary>
             <param name="name">The module's name.</param>
             <param name="type">The module's type.</param>
-        </member>
-        <member name="M:Prism.Modularity.ModuleInfo.#ctor(System.Type)">
-            <summary>
-            Initializes a new instance of <see cref="T:Prism.Modularity.ModuleInfo"/>.
-            </summary>
-            <param name="moduleType">The module's type.</param>
-        </member>
-        <member name="M:Prism.Modularity.ModuleInfo.#ctor(System.Type,System.String)">
-            <summary>
-            Initializes a new instance of <see cref="T:Prism.Modularity.ModuleInfo"/>.
-            </summary>
-            <param name="moduleType">The module's type.</param>
-            <param name="moduleName">The module's name.</param>
-        </member>
-        <member name="M:Prism.Modularity.ModuleInfo.#ctor(System.Type,System.String,Prism.Modularity.InitializationMode)">
-            <summary>
-            Initializes a new instance of <see cref="T:Prism.Modularity.ModuleInfo"/>.
-            </summary>
-            <param name="moduleType">The module's type.</param>
-            <param name="moduleName">The module's name.</param>
-            <param name="initializationMode">The module's <see cref="P:Prism.Modularity.ModuleInfo.InitializationMode"/>.</param>
         </member>
         <member name="P:Prism.Modularity.ModuleInfo.ModuleName">
             <summary>
@@ -1335,25 +1921,25 @@
         </member>
         <member name="T:Prism.Modularity.ModuleInfoGroup">
              <summary>
-             Represents a group of <see cref="T:Prism.Modularity.IModuleInfo"/> instances that are usually deployed together. <see cref="T:Prism.Modularity.ModuleInfoGroup"/>s
-             are also used by the <see cref="T:Prism.Modularity.IModuleCatalog"/> to prevent common deployment problems such as having a module that's required
+             Represents a group of <see cref="T:Prism.Modularity.ModuleInfo"/> instances that are usually deployed together. <see cref="T:Prism.Modularity.ModuleInfoGroup"/>s
+             are also used by the <see cref="T:Prism.Modularity.ModuleCatalog"/> to prevent common deployment problems such as having a module that's required
              at startup that depends on modules that will only be downloaded on demand.
             
-             The group also forwards <see cref="P:Prism.Modularity.ModuleInfoGroup.Ref"/> and <see cref="P:Prism.Modularity.ModuleInfoGroup.InitializationMode"/> values to the <see cref="T:Prism.Modularity.IModuleInfo"/>s that it
+             The group also forwards <see cref="P:Prism.Modularity.ModuleInfoGroup.Ref"/> and <see cref="P:Prism.Modularity.ModuleInfoGroup.InitializationMode"/> values to the <see cref="T:Prism.Modularity.ModuleInfo"/>s that it
              contains.
              </summary>
         </member>
         <member name="P:Prism.Modularity.ModuleInfoGroup.InitializationMode">
             <summary>
-            Gets or sets the <see cref="P:Prism.Modularity.IModuleInfo.InitializationMode"/> for the whole group. Any <see cref="T:Prism.Modularity.IModuleInfo"/> classes that are
+            Gets or sets the <see cref="P:Prism.Modularity.ModuleInfo.InitializationMode"/> for the whole group. Any <see cref="T:Prism.Modularity.ModuleInfo"/> classes that are
             added after setting this value will also get this <see cref="P:Prism.Modularity.ModuleInfoGroup.InitializationMode"/>.
             </summary>
-            <see cref="P:Prism.Modularity.IModuleInfo.InitializationMode"/>
+            <see cref="P:Prism.Modularity.ModuleInfo.InitializationMode"/>
             <value>The initialization mode.</value>
         </member>
         <member name="P:Prism.Modularity.ModuleInfoGroup.Ref">
              <summary>
-             Gets or sets the <see cref="P:Prism.Modularity.IModuleInfo.Ref"/> value for the whole group. Any <see cref="T:Prism.Modularity.IModuleInfo"/> classes that are
+             Gets or sets the <see cref="P:Prism.Modularity.ModuleInfo.Ref"/> value for the whole group. Any <see cref="T:Prism.Modularity.ModuleInfo"/> classes that are
              added after setting this value will also get this <see cref="P:Prism.Modularity.ModuleInfoGroup.Ref"/>.
             
              The ref value will also be used by the <see cref="T:Prism.Modularity.IModuleManager"/> to determine which  <see cref="T:Prism.Modularity.IModuleTypeLoader"/> to use.
@@ -1363,13 +1949,13 @@
              <see cref="P:Prism.Modularity.ModuleInfo.Ref"/>
              <value>The ref value that will be used.</value>
         </member>
-        <member name="M:Prism.Modularity.ModuleInfoGroup.Add(Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.ModuleInfoGroup.Add(Prism.Modularity.ModuleInfo)">
             <summary>
-            Adds an <see cref="T:Prism.Modularity.IModuleInfo"/> moduleInfo to the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>.
+            Adds an <see cref="T:Prism.Modularity.ModuleInfo"/> moduleInfo to the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>.
             </summary>
-            <param name="item">The <see cref="T:Prism.Modularity.IModuleInfo"/> to the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>.</param>
+            <param name="item">The <see cref="T:Prism.Modularity.ModuleInfo"/> to the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>.</param>
         </member>
-        <member name="M:Prism.Modularity.ModuleInfoGroup.ForwardValues(Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.ModuleInfoGroup.ForwardValues(Prism.Modularity.ModuleInfo)">
             <summary>
             Forwards <see cref="P:Prism.Modularity.ModuleInfoGroup.InitializationMode"/> and <see cref="P:Prism.Modularity.ModuleInfoGroup.Ref"/> properties from this <see cref="T:Prism.Modularity.ModuleInfoGroup"/>
             to <paramref name="moduleInfo"/>.
@@ -1379,10 +1965,10 @@
         </member>
         <member name="M:Prism.Modularity.ModuleInfoGroup.Clear">
             <summary>
-            Removes all <see cref="T:Prism.Modularity.IModuleInfo"/>s from the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>.
+            Removes all <see cref="T:Prism.Modularity.ModuleInfo"/>s from the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>.
             </summary>
         </member>
-        <member name="M:Prism.Modularity.ModuleInfoGroup.Contains(Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.ModuleInfoGroup.Contains(Prism.Modularity.ModuleInfo)">
             <summary>
             Determines whether the <see cref="T:Prism.Modularity.ModuleInfoGroup"/> contains a specific value.
             </summary>
@@ -1391,7 +1977,7 @@
             true if <paramref name="item"/> is found in the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>; otherwise, false.
             </returns>
         </member>
-        <member name="M:Prism.Modularity.ModuleInfoGroup.CopyTo(Prism.Modularity.IModuleInfo[],System.Int32)">
+        <member name="M:Prism.Modularity.ModuleInfoGroup.CopyTo(Prism.Modularity.ModuleInfo[],System.Int32)">
             <summary>
             Copies the elements of the <see cref="T:Prism.Modularity.ModuleInfoGroup"/> to an <see cref="T:System.Array"/>, starting at a particular <see cref="T:System.Array"/> index.
             </summary>
@@ -1428,7 +2014,7 @@
             <returns>false, because the <see cref="T:Prism.Modularity.ModuleInfoGroup"/> is not Read-Only.
             </returns>
         </member>
-        <member name="M:Prism.Modularity.ModuleInfoGroup.Remove(Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.ModuleInfoGroup.Remove(Prism.Modularity.ModuleInfo)">
             <summary>
             Removes the first occurrence of a specific object from the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>.
             </summary>
@@ -1471,7 +2057,7 @@
             </summary>
             <param name="value">
             The <see cref="T:System.Object"/> to locate in the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>.
-            Must be of type <see cref="T:Prism.Modularity.IModuleInfo"/>
+            Must be of type <see cref="T:Prism.Modularity.ModuleInfo"/>
             </param>
             <returns>
             true if the <see cref="T:System.Object"/> is found in the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>; otherwise, false.
@@ -1496,7 +2082,7 @@
             <param name="index">The zero-based index at which <paramref name="value"/> should be inserted.</param>
             <param name="value">
             The <see cref="T:System.Object"/> to insert into the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>.
-            Must be of type <see cref="T:Prism.Modularity.IModuleInfo"/>
+            Must be of type <see cref="T:Prism.Modularity.ModuleInfo"/>
             </param>
             <exception cref="T:System.ArgumentOutOfRangeException">
             	<paramref name="index"/> is not a valid index in the <see cref="T:Prism.Modularity.ModuleInfoGroup"/>.
@@ -1505,7 +2091,7 @@
             If <paramref name="value"/> is null.
             </exception>
             <exception cref="T:System.ArgumentException">
-            If <paramref name="value"/> is not of type <see cref="T:Prism.Modularity.IModuleInfo"/>
+            If <paramref name="value"/> is not of type <see cref="T:Prism.Modularity.ModuleInfo"/>
             </exception>
         </member>
         <member name="P:Prism.Modularity.ModuleInfoGroup.IsFixedSize">
@@ -1582,7 +2168,7 @@
             An object that can be used to synchronize access to the <see cref="T:System.Collections.ICollection"/>.
             </returns>
         </member>
-        <member name="M:Prism.Modularity.ModuleInfoGroup.IndexOf(Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.ModuleInfoGroup.IndexOf(Prism.Modularity.ModuleInfo)">
             <summary>
             Determines the index of a specific item in the <see cref="T:System.Collections.Generic.IList`1"/>.
             </summary>
@@ -1591,7 +2177,7 @@
             The index of <paramref name="item"/> if found in the list; otherwise, -1.
             </returns>
         </member>
-        <member name="M:Prism.Modularity.ModuleInfoGroup.Insert(System.Int32,Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.ModuleInfoGroup.Insert(System.Int32,Prism.Modularity.ModuleInfo)">
             <summary>
             Inserts an item to the <see cref="T:System.Collections.Generic.IList`1"/> at the specified index.
             </summary>
@@ -1603,9 +2189,9 @@
         </member>
         <member name="P:Prism.Modularity.ModuleInfoGroup.Item(System.Int32)">
             <summary>
-            Gets or sets the <see cref="T:Prism.Modularity.IModuleInfo"/> at the specified index.
+            Gets or sets the <see cref="T:Prism.Modularity.ModuleInfo"/> at the specified index.
             </summary>
-            <value>The <see cref="T:Prism.Modularity.IModuleInfo"/> at the specified index </value>
+            <value>The <see cref="T:Prism.Modularity.ModuleInfo"/> at the specified index </value>
         </member>
         <member name="T:Prism.Modularity.ModuleInfoGroupExtensions">
             <summary>
@@ -1632,25 +2218,84 @@
             <returns>Returns the instance of the passed in module info group, to provide a fluid interface.</returns>
             <remarks>The name of the module will be the type name.</remarks>
         </member>
+        <member name="T:Prism.Modularity.ModuleInitializeException">
+            <summary>
+            Exception thrown by <see cref="T:Prism.Modularity.IModuleInitializer"/> implementations whenever 
+            a module fails to load.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleInitializeException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleInitializeException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModuleInitializeException"/> class.
+            </summary>
+            <param name="message">The exception message.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleInitializeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModuleInitializeException"/> class.
+            </summary>
+            <param name="message">The exception message.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleInitializeException.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes the exception with a particular module and error message.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="moduleAssembly">The assembly where the module is located.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleInitializeException.#ctor(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            Initializes the exception with a particular module, error message and inner exception 
+            that happened.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="moduleAssembly">The assembly where the module is located.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, 
+            or a <see langword="null"/> reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleInitializeException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes the exception with a particular module, error message and inner exception that happened.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, 
+            or a <see langword="null"/> reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleInitializeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
+        </member>
         <member name="T:Prism.Modularity.ModuleInitializer">
             <summary>
             Implements the <see cref="T:Prism.Modularity.IModuleInitializer"/> interface. Handles loading of a module based on a type.
             </summary>
         </member>
-        <member name="M:Prism.Modularity.ModuleInitializer.#ctor(Prism.Ioc.IContainerExtension,Prism.Logging.ILoggerFacade)">
+        <member name="M:Prism.Modularity.ModuleInitializer.#ctor(Microsoft.Practices.ServiceLocation.IServiceLocator,Prism.Logging.ILoggerFacade)">
             <summary>
             Initializes a new instance of <see cref="T:Prism.Modularity.ModuleInitializer"/>.
             </summary>
-            <param name="containerExtension">The container that will be used to resolve the modules by specifying its type.</param>
+            <param name="serviceLocator">The container that will be used to resolve the modules by specifying its type.</param>
             <param name="loggerFacade">The logger to use.</param>
         </member>
-        <member name="M:Prism.Modularity.ModuleInitializer.Initialize(Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.ModuleInitializer.Initialize(Prism.Modularity.ModuleInfo)">
             <summary>
             Initializes the specified module.
             </summary>
             <param name="moduleInfo">The module to initialize</param>
         </member>
-        <member name="M:Prism.Modularity.ModuleInitializer.HandleModuleInitializationError(Prism.Modularity.IModuleInfo,System.String,System.Exception)">
+        <member name="M:Prism.Modularity.ModuleInitializer.HandleModuleInitializationError(Prism.Modularity.ModuleInfo,System.String,System.Exception)">
             <summary>
             Handles any exception occurred in the module Initialization process,
             logs the error using the <see cref="T:Prism.Logging.ILoggerFacade"/> and throws a <see cref="T:Prism.Modularity.ModuleInitializeException"/>.
@@ -1661,7 +2306,7 @@
             <param name="exception">The exception thrown that is the cause of the current error.</param>
             <exception cref="T:Prism.Modularity.ModuleInitializeException"></exception>
         </member>
-        <member name="M:Prism.Modularity.ModuleInitializer.CreateModule(Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.ModuleInitializer.CreateModule(Prism.Modularity.ModuleInfo)">
             <summary>
             Uses the container to resolve a new <see cref="T:Prism.Modularity.IModule"/> by specifying its <see cref="T:System.Type"/>.
             </summary>
@@ -1717,7 +2362,7 @@
             </summary>
             <param name="moduleName">Name of the module requested for initialization.</param>
         </member>
-        <member name="M:Prism.Modularity.ModuleManager.ModuleNeedsRetrieval(Prism.Modularity.IModuleInfo)">
+        <member name="M:Prism.Modularity.ModuleManager.ModuleNeedsRetrieval(Prism.Modularity.ModuleInfo)">
             <summary>
             Checks if the module needs to be retrieved before it's initialized.
             </summary>
@@ -1729,7 +2374,7 @@
             Loads the modules that are not intialized and have their dependencies loaded.
             </summary>
         </member>
-        <member name="M:Prism.Modularity.ModuleManager.HandleModuleTypeLoadingError(Prism.Modularity.IModuleInfo,System.Exception)">
+        <member name="M:Prism.Modularity.ModuleManager.HandleModuleTypeLoadingError(Prism.Modularity.ModuleInfo,System.Exception)">
             <summary>
             Handles any exception occurred in the module typeloading process,
             logs the error using the <see cref="T:Prism.Logging.ILoggerFacade"/> and throws a <see cref="T:Prism.Modularity.ModuleTypeLoadingException"/>.
@@ -1759,6 +2404,59 @@
             </summary>
             <value>The module type loaders.</value>
         </member>
+        <member name="T:Prism.Modularity.ModuleNotFoundException">
+            <summary>
+            Exception thrown when a requested <see cref="F:Prism.Modularity.InitializationMode.OnDemand"/> <see cref="T:Prism.Modularity.IModule"/> was not found.
+            </summary>
+            <summary>
+            Exception thrown when a requested <see cref="T:Prism.Modularity.ModuleInfo"/> is not found.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModuleNotFoundException" /> class.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModuleNotFoundException" /> class with a specified error message.
+            </summary>
+            <param name="message">
+            The message that describes the error. 
+            </param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModuleNotFoundException" /> class with a specified error message.
+            </summary>
+            <param name="message">
+            The message that describes the error. 
+            </param>
+            <param name="innerException">The inner exception</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleNotFoundException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModuleNotFoundException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleNotFoundException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModuleNotFoundException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModuleNotFoundException"/> class
+            with the serialization data.
+            </summary>
+            <param name="info">Holds the serialized object data about the exception being thrown.</param>
+            <param name="context">Contains contextual information about the source or destination.</param>
+        </member>
         <member name="T:Prism.Modularity.ModulesConfigurationSection">
             <summary>
             A <see cref="T:System.Configuration.ConfigurationSection"/> for module configuration.
@@ -1769,6 +2467,131 @@
             Gets or sets the collection of modules configuration.
             </summary>
             <value>A <see cref="T:Prism.Modularity.ModuleConfigurationElementCollection"/> of <see cref="T:Prism.Modularity.ModuleConfigurationElement"/>.</value>
+        </member>
+        <member name="T:Prism.Modularity.ModuleState">
+            <summary>
+            Defines the states a <see cref="T:Prism.Modularity.ModuleInfo"/> can be in, with regards to the module loading and initialization process. 
+            </summary>
+        </member>
+        <member name="F:Prism.Modularity.ModuleState.NotStarted">
+            <summary>
+            Initial state for <see cref="T:Prism.Modularity.ModuleInfo"/>s. The <see cref="T:Prism.Modularity.ModuleInfo"/> is defined, 
+            but it has not been loaded, retrieved or initialized yet. 
+            </summary>
+        </member>
+        <member name="F:Prism.Modularity.ModuleState.LoadingTypes">
+            <summary>
+            The assembly that contains the type of the module is currently being loaded by an instance of a
+            <see cref="T:Prism.Modularity.IModuleTypeLoader"/>. 
+            </summary>
+        </member>
+        <member name="F:Prism.Modularity.ModuleState.ReadyForInitialization">
+            <summary>
+            The assembly that holds the Module is present. This means the type of the <see cref="T:Prism.Modularity.IModule"/> can be instantiated and initialized. 
+            </summary>
+        </member>
+        <member name="F:Prism.Modularity.ModuleState.Initializing">
+            <summary>
+            The module is currently Initializing, by the <see cref="T:Prism.Modularity.IModuleInitializer"/>
+            </summary>
+        </member>
+        <member name="F:Prism.Modularity.ModuleState.Initialized">
+            <summary>
+            The module is initialized and ready to be used. 
+            </summary>
+        </member>
+        <member name="T:Prism.Modularity.ModuleTypeLoaderNotFoundException">
+            <summary>
+            Exception that's thrown when there is no <see cref="T:Prism.Modularity.IModuleTypeLoader"/> registered in 
+            <see cref="P:Prism.Modularity.ModuleManager.ModuleTypeLoaders"/> that can handle this particular type of module. 
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleTypeLoaderNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModuleTypeLoaderNotFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleTypeLoaderNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModuleTypeLoaderNotFoundException" /> class with a specified error message.
+            </summary>
+            <param name="message">
+            The message that describes the error. 
+            </param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleTypeLoaderNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Modularity.ModuleTypeLoaderNotFoundException" /> class with a specified error message.
+            </summary>
+            <param name="message">
+            The message that describes the error. 
+            </param>
+            <param name="innerException">The inner exception</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleTypeLoaderNotFoundException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes the exception with a particular module, error message and inner exception that happened.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, 
+            or a <see langword="null"/> reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleTypeLoaderNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:Prism.Modularity.ModuleTypeLoadingException">
+            <summary>
+            Exception thrown by <see cref="T:Prism.Modularity.IModuleManager"/> implementations whenever 
+            a module fails to retrieve.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleTypeLoadingException.#ctor">
+            <summary>
+            Initializes a new instance.
+            </summary>
+        </member>
+        <member name="M:Prism.Modularity.ModuleTypeLoadingException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleTypeLoadingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance with a specified error message 
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="exception">The exception that is the cause of the current exception, 
+            or a <see langword="null"/> reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleTypeLoadingException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes the exception with a particular module and error message.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleTypeLoadingException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes the exception with a particular module, error message and inner exception that happened.
+            </summary>
+            <param name="moduleName">The name of the module.</param>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, 
+            or a <see langword="null"/> reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Prism.Modularity.ModuleTypeLoadingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
         </member>
         <member name="T:Prism.Mvvm.ViewModelLocator">
             <summary>
@@ -1786,110 +2609,6 @@
             </summary>
             <param name="view">The View to set the DataContext on</param>
             <param name="viewModel">The object to use as the DataContext for the View</param>
-        </member>
-        <member name="T:Prism.PrismApplicationBase">
-            <summary>
-            Base application class that provides a basic initialization sequence
-            </summary>
-            <remarks>
-            This class must be overridden to provide application specific configuration.
-            </remarks>
-        </member>
-        <member name="P:Prism.PrismApplicationBase.Container">
-            <summary>
-            The dependency injection container used to resolve objects
-            </summary>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.InitializeInternal">
-            <summary>
-            Run the initialization process.
-            </summary>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.ConfigureViewModelLocator">
-            <summary>
-            Configures the <see cref="T:Prism.Mvvm.ViewModelLocator"/> used by Prism.
-            </summary>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.Initialize">
-            <summary>
-            Runs the initialization sequence to configure the Prism application.
-            </summary>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.CreateContainerExtension">
-            <summary>
-            Creates the container used by Prism.
-            </summary>
-            <returns>The container</returns>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.CreateModuleCatalog">
-            <summary>
-            Creates the <see cref="T:Prism.Modularity.IModuleCatalog"/> used by Prism.
-            </summary>
-             <remarks>
-            The base implementation returns a new ModuleCatalog.
-            </remarks>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.RegisterRequiredTypes(Prism.Ioc.IContainerRegistry)">
-            <summary>
-            Registers all types that are required by Prism to function with the container.
-            </summary>
-            <param name="containerRegistry"></param>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.RegisterTypes(Prism.Ioc.IContainerRegistry)">
-            <summary>
-            Used to register types with the container that will be used by your application.
-            </summary>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.ConfigureDefaultRegionBehaviors(Prism.Regions.IRegionBehaviorFactory)">
-            <summary>
-            Configures the <see cref="T:Prism.Regions.IRegionBehaviorFactory"/>. 
-            This will be the list of default behaviors that will be added to a region. 
-            </summary>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.ConfigureRegionAdapterMappings(Prism.Regions.RegionAdapterMappings)">
-            <summary>
-            Configures the default region adapter mappings to use in the application, in order
-            to adapt UI controls defined in XAML to use a region and register it automatically.
-            May be overwritten in a derived class to add specific mappings required by the application.
-            </summary>
-            <returns>The <see cref="T:Prism.Regions.RegionAdapterMappings"/> instance containing all the mappings.</returns>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.RegisterFrameworkExceptionTypes">
-            <summary>
-            Registers the <see cref="T:System.Type"/>s of the Exceptions that are not considered 
-            root exceptions by the <see cref="T:System.ExceptionExtensions"/>.
-            </summary>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.CreateShell">
-            <summary>
-            Creates the shell or main window of the application.
-            </summary>
-            <returns>The shell of the application.</returns>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.InitializeShell(System.Windows.Window)">
-            <summary>
-            Initializes the shell.
-            </summary>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.OnInitialized">
-            <summary>
-            Contains actions that should occur last.
-            </summary>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.ConfigureModuleCatalog(Prism.Modularity.IModuleCatalog)">
-            <summary>
-            Configures the <see cref="T:Prism.Modularity.IModuleCatalog"/> used by Prism.
-            </summary>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.InitializeModules">
-            <summary>
-            Initializes the modules.
-            </summary>
-        </member>
-        <member name="M:Prism.PrismApplicationBase.ConfigureServiceLocator">
-            <summary>
-            Configures the LocatorProvider for the <see cref="!:Microsoft.Practices.ServiceLocation.ServiceLocator" />.
-            </summary>
         </member>
         <member name="T:Prism.Properties.Resources">
             <summary>
@@ -1940,6 +2659,11 @@
                this exception may be caused by a change in the value of the inherited RegionManager attached property..
             </summary>
         </member>
+        <member name="P:Prism.Properties.Resources.CyclicDependencyFound">
+            <summary>
+              Looks up a localized string similar to At least one cyclic dependency has been found in the module catalog. Cycles in the module dependencies must be avoided..
+            </summary>
+        </member>
         <member name="P:Prism.Properties.Resources.DeactiveNotPossibleException">
             <summary>
               Looks up a localized string similar to Deactivation is not possible in this type of region..
@@ -1960,9 +2684,24 @@
               Looks up a localized string similar to T for DelegateCommand&lt;T&gt; is not an object nor Nullable..
             </summary>
         </member>
+        <member name="P:Prism.Properties.Resources.DependencyForUnknownModule">
+            <summary>
+              Looks up a localized string similar to Cannot add dependency for unknown module {0}.
+            </summary>
+        </member>
+        <member name="P:Prism.Properties.Resources.DependencyOnMissingModule">
+            <summary>
+              Looks up a localized string similar to A module declared a dependency on another module which is not declared to be loaded. Missing module(s): {0}.
+            </summary>
+        </member>
         <member name="P:Prism.Properties.Resources.DirectoryNotFound">
             <summary>
               Looks up a localized string similar to Directory {0} was not found..
+            </summary>
+        </member>
+        <member name="P:Prism.Properties.Resources.DuplicatedModule">
+            <summary>
+              Looks up a localized string similar to A duplicated module with name {0} has been found by the loader..
             </summary>
         </member>
         <member name="P:Prism.Properties.Resources.DuplicatedModuleGroup">
@@ -1974,6 +2713,30 @@
             <summary>
               Looks up a localized string similar to Unable to retrieve the module type {0} from the loaded assemblies.  You may need to specify a more fully-qualified type name..
             </summary>
+        </member>
+        <member name="P:Prism.Properties.Resources.FailedToLoadModule">
+            <summary>
+              Looks up a localized string similar to An exception occurred while initializing module &apos;{0}&apos;. 
+               - The exception message was: {2}
+               - The Assembly that the module was trying to be loaded from was:{1}
+               Check the InnerException property of the exception for more information. If the exception occurred while creating an object in a DI container, you can exception.GetRootException() to help locate the root cause of the problem. 
+             .
+            </summary>
+        </member>
+        <member name="P:Prism.Properties.Resources.FailedToLoadModuleNoAssemblyInfo">
+            <summary>
+              Looks up a localized string similar to An exception occurred while initializing module &apos;{0}&apos;. 
+               - The exception message was: {1}
+               Check the InnerException property of the exception for more information. If the exception occurred 
+               while creating an object in a DI container, you can exception.GetRootException() to help locate the 
+               root cause of the problem. .
+            </summary>
+        </member>
+        <member name="P:Prism.Properties.Resources.FailedToRetrieveModule">
+             <summary>
+               Looks up a localized string similar to Failed to load type for module {0}. 
+            Error was: {1}..
+             </summary>
         </member>
         <member name="P:Prism.Properties.Resources.HostControlCannotBeNull">
             <summary>
@@ -2018,6 +2781,11 @@
               Looks up a localized string similar to Mapping with the given type is already registered: {0}..
             </summary>
         </member>
+        <member name="P:Prism.Properties.Resources.ModuleDependenciesNotMetInGroup">
+            <summary>
+              Looks up a localized string similar to Module {0} depends on other modules that don&apos;t belong to the same group..
+            </summary>
+        </member>
         <member name="P:Prism.Properties.Resources.ModuleNotFound">
             <summary>
               Looks up a localized string similar to Module {0} was not found in the catalog..
@@ -2031,11 +2799,6 @@
         <member name="P:Prism.Properties.Resources.ModuleTypeNotFound">
             <summary>
               Looks up a localized string similar to Failed to load type &apos;{0}&apos; from assembly &apos;{1}&apos;..
-            </summary>
-        </member>
-        <member name="P:Prism.Properties.Resources.MustBeModuleGroupCatalog">
-            <summary>
-              Looks up a localized string similar to The ModuleCatalog must implement IModuleGroupCatalog to add groups.
             </summary>
         </member>
         <member name="P:Prism.Properties.Resources.NavigationInProgress">
@@ -2128,6 +2891,11 @@
         <member name="P:Prism.Properties.Resources.RegionViewNameExistsException">
             <summary>
               Looks up a localized string similar to View with name &apos;{0}&apos; already exists in the region..
+            </summary>
+        </member>
+        <member name="P:Prism.Properties.Resources.StartupModuleDependsOnAnOnDemandModule">
+            <summary>
+              Looks up a localized string similar to Module {0} is marked for automatic initialization when the application starts, but it depends on modules that are marked as OnDemand initialization. To fix this error, mark the dependency modules for InitializationMode=WhenAvailable, or remove this validation by extending the ModuleCatalog class..
             </summary>
         </member>
         <member name="P:Prism.Properties.Resources.StringCannotBeNullOrEmpty">
@@ -2349,17 +3117,6 @@
             <param name="targetElement">The target element that will host the <see cref="T:Prism.Regions.IRegion"/>.</param>
             <param name="regionName">Name of the region.</param>
             <returns>The created <see cref="T:Prism.Regions.IRegion"/></returns>
-        </member>
-        <member name="M:Prism.Regions.Behaviors.DelayedRegionCreationBehavior.Track">
-            <summary>
-            Add the instance of this class to <see cref="F:Prism.Regions.Behaviors.DelayedRegionCreationBehavior._instanceTracker"/> to keep it alive
-            </summary>
-        </member>
-        <member name="M:Prism.Regions.Behaviors.DelayedRegionCreationBehavior.Untrack">
-            <summary>
-            Remove the instance of this class from <see cref="F:Prism.Regions.Behaviors.DelayedRegionCreationBehavior._instanceTracker"/>
-            so it can eventually be garbage collected
-            </summary>
         </member>
         <member name="T:Prism.Regions.Behaviors.IHostAwareRegionBehavior">
             <summary>
@@ -2641,17 +3398,6 @@
             Implementors of this method do not need to invoke the callback before this method is completed,
             but they must ensure the callback is eventually invoked.
             </remarks>
-        </member>
-        <member name="T:Prism.Regions.IJournalAware">
-            <summary>
-            Provides a way for objects involved in navigation to opt-out of being added to the IRegionNavigationJournal backstack.
-            </summary>
-        </member>
-        <member name="M:Prism.Regions.IJournalAware.PersistInHistory">
-            <summary>
-            Determines if the current obect is going to be added to the navigation journal's backstack.
-            </summary>
-            <returns>True, add to backstack. False, remove from backstack.</returns>
         </member>
         <member name="T:Prism.Regions.INavigateAsync">
             <summary>
@@ -3156,7 +3902,7 @@
             Navigates to the most recent entry in the forward navigation history, or does nothing if no entry exists in forward navigation.
             </summary>
         </member>
-        <member name="M:Prism.Regions.IRegionNavigationJournal.RecordNavigation(Prism.Regions.IRegionNavigationJournalEntry,System.Boolean)">
+        <member name="M:Prism.Regions.IRegionNavigationJournal.RecordNavigation(Prism.Regions.IRegionNavigationJournalEntry)">
             <summary>
             Records the navigation to the entry..
             </summary>
@@ -3436,16 +4182,6 @@
             This class can be used to to pass object parameters during Navigation. 
             </remarks>
         </member>
-        <member name="P:Prism.Regions.NavigationParameters.Count">
-            <summary>
-            Gets the number of parameters contained in the NavigationParameters
-            </summary>
-        </member>
-        <member name="P:Prism.Regions.NavigationParameters.Keys">
-            <summary>
-            Gets an IEnumerable containing the keys in the NavigationParameters
-            </summary>
-        </member>
         <member name="M:Prism.Regions.NavigationParameters.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:Prism.Regions.NavigationParameters"/> class.
@@ -3475,37 +4211,6 @@
             </summary>
             <param name="key">The name.</param>
             <param name="value">The value.</param>
-        </member>
-        <member name="M:Prism.Regions.NavigationParameters.ContainsKey(System.String)">
-            <summary>
-            Determines whether the NavigationParameters contains the specified key
-            </summary>
-            <param name="key">The key to locate</param>
-        </member>
-        <member name="M:Prism.Regions.NavigationParameters.GetValue``1(System.String)">
-            <summary>
-            Gets a strongly typed value with the specified key.
-            </summary>
-            <typeparam name="T">The type to cast/convert the value to.</typeparam>
-            <param name="key">The key.</param>
-            <returns>The value.</returns>
-        </member>
-        <member name="M:Prism.Regions.NavigationParameters.TryGetValue``1(System.String,``0@)">
-            <summary>
-            Gets a strongly typed value with the specified key.
-            </summary>
-            <typeparam name="T">The type to cast/convert the value to.</typeparam>
-            <param name="key">The key.</param>
-            <param name="value">Key value if such key exists.</param>
-            <returns>True if such key exists.</returns>
-        </member>
-        <member name="M:Prism.Regions.NavigationParameters.GetValues``1(System.String)">
-            <summary>
-            Gets a strongly typed collection containing the values with the specified key.
-            </summary>
-            <typeparam name="T">The type to cast/convert the value to.</typeparam>
-            <param name="key">The key.</param>
-            <returns>The collection of values.</returns>
         </member>
         <member name="M:Prism.Regions.NavigationParameters.ToString">
             <summary>
@@ -3872,11 +4577,11 @@
             be added to the <see cref="T:Prism.Regions.IRegionBehaviorCollection"/> of all <see cref="T:Prism.Regions.IRegion"/>s, unless overridden on a 'per-region' basis.
             </summary>
         </member>
-        <member name="M:Prism.Regions.RegionBehaviorFactory.#ctor(CommonServiceLocator.IServiceLocator)">
+        <member name="M:Prism.Regions.RegionBehaviorFactory.#ctor(Microsoft.Practices.ServiceLocation.IServiceLocator)">
             <summary>
             Initializes a new instance of <see cref="T:Prism.Regions.RegionBehaviorFactory"/>.
             </summary>
-            <param name="serviceLocator"><see cref="T:CommonServiceLocator.IServiceLocator"/> used to create the instance of the behavior from its <see cref="T:System.Type"/>.</param>
+            <param name="serviceLocator"><see cref="T:Microsoft.Practices.ServiceLocation.IServiceLocator"/> used to create the instance of the behavior from its <see cref="T:System.Type"/>.</param>
         </member>
         <member name="M:Prism.Regions.RegionBehaviorFactory.AddIfMissing(System.String,System.Type)">
             <summary>
@@ -4187,11 +4892,11 @@
         </member>
         <member name="T:Prism.Regions.RegionNavigationContentLoader">
             <summary>
-            Implementation of <see cref="T:Prism.Regions.IRegionNavigationContentLoader"/> that relies on a <see cref="T:CommonServiceLocator.IServiceLocator"/>
+            Implementation of <see cref="T:Prism.Regions.IRegionNavigationContentLoader"/> that relies on a <see cref="T:Microsoft.Practices.ServiceLocation.IServiceLocator"/>
             to create new views when necessary.
             </summary>
         </member>
-        <member name="M:Prism.Regions.RegionNavigationContentLoader.#ctor(CommonServiceLocator.IServiceLocator)">
+        <member name="M:Prism.Regions.RegionNavigationContentLoader.#ctor(Microsoft.Practices.ServiceLocation.IServiceLocator)">
             <summary>
             Initializes a new instance of the <see cref="T:Prism.Regions.RegionNavigationContentLoader"/> class with a service locator.
             </summary>
@@ -4343,12 +5048,11 @@
             Navigates to the most recent entry in the forward navigation history, or does nothing if no entry exists in forward navigation.
             </summary>
         </member>
-        <member name="M:Prism.Regions.RegionNavigationJournal.RecordNavigation(Prism.Regions.IRegionNavigationJournalEntry,System.Boolean)">
+        <member name="M:Prism.Regions.RegionNavigationJournal.RecordNavigation(Prism.Regions.IRegionNavigationJournalEntry)">
             <summary>
             Records the navigation to the entry..
             </summary>
             <param name="entry">The entry to record.</param>
-            <param name="persistInHistory">Determine if the view is added to the back stack or excluded from the history.</param>
         </member>
         <member name="M:Prism.Regions.RegionNavigationJournal.Clear">
             <summary>
@@ -4384,7 +5088,7 @@
             Provides navigation for regions.
             </summary>
         </member>
-        <member name="M:Prism.Regions.RegionNavigationService.#ctor(CommonServiceLocator.IServiceLocator,Prism.Regions.IRegionNavigationContentLoader,Prism.Regions.IRegionNavigationJournal)">
+        <member name="M:Prism.Regions.RegionNavigationService.#ctor(Microsoft.Practices.ServiceLocation.IServiceLocator,Prism.Regions.IRegionNavigationContentLoader,Prism.Regions.IRegionNavigationJournal)">
             <summary>
             Initializes a new instance of the <see cref="T:Prism.Regions.RegionNavigationService"/> class.
             </summary>
@@ -4439,11 +5143,11 @@
             Defines a registry for the content of the regions used on View Discovery composition.
             </summary>
         </member>
-        <member name="M:Prism.Regions.RegionViewRegistry.#ctor(CommonServiceLocator.IServiceLocator)">
+        <member name="M:Prism.Regions.RegionViewRegistry.#ctor(Microsoft.Practices.ServiceLocation.IServiceLocator)">
             <summary>
             Creates a new instance of the <see cref="T:Prism.Regions.RegionViewRegistry"/> class.
             </summary>
-            <param name="locator"><see cref="T:CommonServiceLocator.IServiceLocator"/> used to create the instance of the views from its <see cref="T:System.Type"/>.</param>
+            <param name="locator"><see cref="T:Microsoft.Practices.ServiceLocation.IServiceLocator"/> used to create the instance of the views from its <see cref="T:System.Type"/>.</param>
         </member>
         <member name="E:Prism.Regions.RegionViewRegistry.ContentRegistered">
             <summary>
@@ -4793,28 +5497,28 @@
             <paramref name="exception"/> value itself.
             </returns>
         </member>
-        <member name="T:CommonServiceLocator.ServiceLocatorExtensions">
+        <member name="T:Microsoft.Practices.ServiceLocation.ServiceLocatorExtensions">
             <summary>
-            Defines extension methods for the <see cref="T:CommonServiceLocator.ServiceLocator"/> class.
+            Defines extension methods for the <see cref="T:Microsoft.Practices.ServiceLocation.ServiceLocator"/> class.
             </summary>
         </member>
-        <member name="M:CommonServiceLocator.ServiceLocatorExtensions.TryResolve(CommonServiceLocator.IServiceLocator,System.Type)">
+        <member name="M:Microsoft.Practices.ServiceLocation.ServiceLocatorExtensions.TryResolve(Microsoft.Practices.ServiceLocation.IServiceLocator,System.Type)">
             <summary>
-            Attempts to resolve specified type from the underlying <see cref="T:CommonServiceLocator.IServiceLocator"/>.
+            Attempts to resolve specified type from the underlying <see cref="T:Microsoft.Practices.ServiceLocation.IServiceLocator"/>.
             </summary>
             <remarks>
-            This will return null on any <see cref="T:CommonServiceLocator.ActivationException"/>.</remarks>
+            This will return null on any <see cref="T:Microsoft.Practices.ServiceLocation.ActivationException"/>.</remarks>
             <param name="locator">Locator to use in resolving.</param>
             <param name="type">Type to resolve.</param>
             <returns>T or null</returns>
             <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="locator"/> is <see langword="null"/>.</exception>
         </member>
-        <member name="M:CommonServiceLocator.ServiceLocatorExtensions.TryResolve``1(CommonServiceLocator.IServiceLocator)">
+        <member name="M:Microsoft.Practices.ServiceLocation.ServiceLocatorExtensions.TryResolve``1(Microsoft.Practices.ServiceLocation.IServiceLocator)">
             <summary>
-            Attempts to resolve specified type from the underlying <see cref="T:CommonServiceLocator.IServiceLocator"/>.
+            Attempts to resolve specified type from the underlying <see cref="T:Microsoft.Practices.ServiceLocation.IServiceLocator"/>.
             </summary>
             <remarks>
-            This will return null on any <see cref="T:CommonServiceLocator.ActivationException"/>.</remarks>
+            This will return null on any <see cref="T:Microsoft.Practices.ServiceLocation.ActivationException"/>.</remarks>
             <typeparam name="T">Type to resolve.</typeparam>
             <param name="locator">Locator to use in resolving.</param>
             <returns>T or null</returns>

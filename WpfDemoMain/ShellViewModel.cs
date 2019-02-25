@@ -9,7 +9,7 @@ using System.Windows.Threading;
 using Prism.Events;
 using Prism.Mvvm;
 
-namespace Wams.UI.WpfAutomation
+namespace WpfDemoMain
 {
     [Export(typeof(IShellViewModel))]
     public class ShellViewModel : BindableBase, IShellViewModel

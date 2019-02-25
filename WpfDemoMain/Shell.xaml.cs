@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Windows;
 
-namespace Wams.UI.WpfAutomation
+namespace WpfDemoMain
 {
     /// <summary>
     ///     MainWindow.xaml 的交互逻辑

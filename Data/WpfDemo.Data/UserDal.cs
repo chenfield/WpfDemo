@@ -8,10 +8,13 @@ using WpfDemo.Entities;
 
 namespace WpfDemo.Data
 {
-    public class UserDal
+    /// <summary>
+    /// 用户数据操作类 
+    /// </summary>
+    public class UserDal : IUserDal
     {
         /// <summary>
-        /// 
+        /// 增加用户
         /// </summary>
         /// <param name="user"></param>
         public void Add(User user)
@@ -24,16 +27,16 @@ namespace WpfDemo.Data
         }
 
         /// <summary>
-        /// 
+        /// 得到用户列表
         /// </summary>
         /// <returns></returns>
-        public List<User> GetUsers()
+        public List<User> GetList()
         {
-            var items = new List<User>();
+            List<User> items;
 
             using (EF6Context context = new EF6Context())
             {
-                items = context.Users.ToList();
+                items = context.Set<User>().ToList();
             }
 
             return items;

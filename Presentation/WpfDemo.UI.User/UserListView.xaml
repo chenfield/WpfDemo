@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:WpfDemo.UI.User"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <StackPanel Orientation="Vertical">
         <DataGrid AutoGenerateColumns="True" ItemsSource="{Binding UserItems}"></DataGrid>
-    </Grid>
+        <!--<TextBox x:Name="tbxName"></TextBox>-->
+        <Button Height="30" Width="120" Content="Add" Command="{Binding AddCmd}"></Button>
+    </StackPanel>
 </UserControl>

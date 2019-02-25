@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Wams.UI.WpfAutomation
+namespace WpfDemoMain
 {
     /// <summary>
     /// App.xaml 的交互逻辑

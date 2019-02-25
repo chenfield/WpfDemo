@@ -11,3 +11,15 @@ C:\pro\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.csproj.CoreCompi
 C:\pro\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.csproj.CopyComplete
 C:\pro\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.dll
 C:\pro\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.pdb
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\bin\Debug\WpfDemo.Entities.dll
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\bin\Debug\WpfDemo.Entities.pdb
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\bin\Debug\EntityFramework.dll
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\bin\Debug\System.Data.SQLite.dll
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\bin\Debug\System.Data.SQLite.EF6.dll
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\bin\Debug\EntityFramework.xml
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\bin\Debug\System.Data.SQLite.xml
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\bin\Debug\System.Data.SQLite.dll.config
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.csproj.CoreCompileInputs.cache
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.csproj.CopyComplete
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.dll
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.pdb

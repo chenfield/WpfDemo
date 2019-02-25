@@ -31,8 +31,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.4.9.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Mef.Wpf, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Mef.6.3.0\lib\net45\Prism.Mef.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Wpf, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Wpf.6.3.0\lib\net45\Prism.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Wpf.6.3.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IUserBll.cs" />
+    <Compile Include="ModuleBusinessConfiguration.cs" />
     <Compile Include="UserBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,6 +74,9 @@
       <Project>{3de52ae6-b6b5-4840-9b1b-79ea9eb9784f}</Project>
       <Name>WpfDemo.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

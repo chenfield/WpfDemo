@@ -12,3 +12,16 @@ C:\pro\WpfDemo\Shared\WpfDemo.Common\bin\Debug\Prism.Wpf.pdb
 C:\pro\WpfDemo\Shared\WpfDemo.Common\bin\Debug\Prism.Wpf.xml
 C:\pro\WpfDemo\Shared\WpfDemo.Common\obj\Debug\WpfDemo.Common.csprojAssemblyReference.cache
 C:\pro\WpfDemo\Shared\WpfDemo.Common\obj\Debug\WpfDemo.Common.csproj.CopyComplete
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\bin\Debug\WpfDemo.Common.dll
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\bin\Debug\WpfDemo.Common.pdb
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\bin\Debug\Prism.dll
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\bin\Debug\Prism.Mef.Wpf.dll
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\bin\Debug\Prism.Wpf.dll
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\bin\Debug\System.Windows.Interactivity.dll
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\bin\Debug\Prism.xml
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\bin\Debug\Prism.Mef.Wpf.xml
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\bin\Debug\Prism.Wpf.xml
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\obj\Debug\WpfDemo.Common.csproj.CoreCompileInputs.cache
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\obj\Debug\WpfDemo.Common.csproj.CopyComplete
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\obj\Debug\WpfDemo.Common.dll
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Common\obj\Debug\WpfDemo.Common.pdb

@@ -1,26 +1,20 @@
 ﻿using System;
 using System.ComponentModel.Composition.Hosting;
 using System.Windows;
-using Prism.Ioc;
+using Autofac;
 using Prism.Modularity;
+using WpfDemo.Business;
+using WpfDemo.Data;
 using WpfDemo.UI.User;
 
-namespace Wams.UI.WpfAutomation
+namespace WpfDemoMain
 {
     public class MefBootstrapper : Prism.Mef.MefBootstrapper
     {
-        private CompositionContainer _container;
-
         protected override void ConfigureAggregateCatalog()
         {
             base.ConfigureAggregateCatalog();
-            //this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(GetType().Assembly));
-            //An aggregate catalog that combines multiple catalogs
-            var catalog = new AggregateCatalog();
-            //Adds all the parts found in the same assembly as the Program class
-            catalog.Catalogs.Add(new AssemblyCatalog(typeof(MefBootstrapper).Assembly));
-            _container = new CompositionContainer(catalog);
-            //AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof (MefBootstrapper).Assembly));
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(MefBootstrapper).Assembly));
         }
 
         protected override void ConfigureContainer()
@@ -28,28 +22,11 @@ namespace Wams.UI.WpfAutomation
             base.ConfigureContainer();
         }
 
-        protected override IContainerExtension CreateContainerExtension()
+        protected override IModuleCatalog CreateModuleCatalog()
         {
-            return CreateContainerExtension();
-            //return _container;
+            var uri = new Uri("/WpfDemoMain;Component/ModulesCatalog.xaml", UriKind.Relative);
+            return Prism.Modularity.ModuleCatalog.CreateFromXaml(uri);
         }
-
-        protected override void ConfigureModuleCatalog()
-        {
-            Type moduleCType = typeof(ModuleUser);
-            ModuleCatalog.AddModule(
-            new ModuleInfo()
-            {
-                ModuleName = moduleCType.Name,
-                ModuleType = moduleCType.AssemblyQualifiedName,
-            });
-        }
-
-        //protected override IModuleCatalog CreateModuleCatalog()
-        //{
-        //    var uri = new Uri("/WpfDemoMain;Component/ModulesCatalog.xaml", UriKind.Relative);
-        //    return Prism.Modularity.ModuleCatalog.CreateFromXaml(uri);
-        //}
 
         protected override DependencyObject CreateShell()
         {
@@ -59,7 +36,7 @@ namespace Wams.UI.WpfAutomation
 
         protected override void InitializeShell()
         {
-           // base.InitializeShell();
+            //base.InitializeShell();
             Application.Current.MainWindow = (Window) Shell;
             Application.Current.MainWindow.Show();
         }

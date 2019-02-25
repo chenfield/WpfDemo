@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using WpfDemo.Entities;
 
 namespace WpfDemo.Data
@@ -17,8 +18,7 @@ namespace WpfDemo.Data
             : base(databaseName)
         {
         }
-
-
+        
         /// <summary>
         /// 
         /// </summary>

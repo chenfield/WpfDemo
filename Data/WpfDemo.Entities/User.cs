@@ -8,15 +8,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WpfDemo.Entities
 {
+    /// <summary>
+    /// 用户实体类
+    /// </summary>
     [Table("User")]
     public class User
     {
-        public enum TestENUM : long { A, B, C };
+        [Key]
+        public int Id { get; set; }
 
-        [Key]//, DatabaseGenerated(DatabaseGeneratedOption.Identity)
-        public Int64 Id { get; set; }
-
-        //[StringLength(30)]
+        /// <summary>
+        /// 用户名
+        /// </summary>
+        [StringLength(30)]
         public string Name { get; set; }
     }
 }

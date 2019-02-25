@@ -8,26 +8,41 @@ using WpfDemo.Data;
 
 namespace WpfDemo.Business
 {
-    public class UserBll
+    /// <summary>
+    /// 用户业务类
+    /// </summary>
+    public class UserBll : IUserBll
     {
-        UserDal dal = new UserDal();
+        /// <summary>
+        /// 用户数据类接口
+        /// </summary>
+        private readonly IUserDal _userDal;
 
         /// <summary>
-        /// 
+        /// 用户业务类初始化
+        /// </summary>
+        /// <param name="userDal"></param>
+        public UserBll(IUserDal userDal)
+        {
+            _userDal = userDal;
+        }
+
+        /// <summary>
+        /// 增加用户
         /// </summary>
         /// <param name="user"></param>
         public void Add(User user)
         {
-            dal.Add(user);
+            _userDal.Add(user);
         }
 
         /// <summary>
-        /// 
+        /// 得到用户列表
         /// </summary>
         /// <returns></returns>
-        public List<User> GetUsers()
+        public List<User> GetList()
         {
-            return dal.GetUsers();
+            return _userDal.GetList();
         }
     }
 }

@@ -2,47 +2,73 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
+using System.Windows.Input;
 using Prism.Mvvm;
 using WpfDemo.Business;
+using WpfDemo.Common;
+using WpfDemo.Data;
 
 namespace WpfDemo.UI.User
 {
     /// <summary>
-    /// 
+    /// 操作用户
     /// </summary>
     [Export(typeof(IUserListViewModel))]
     public class UserListViewModel : BindableBase, IUserListViewModel
     {
         /// <summary>
-        /// 
+        /// 用户页面
         /// </summary>
         public IUserListView View { get; set; }
 
         /// <summary>
-        /// 
+        /// 用户列表
         /// </summary>
         private ObservableCollection<Entities.User> _users = new ObservableCollection<Entities.User>();
 
-        UserBll bll = new UserBll();
+        /// <summary>
+        /// 增加用户事件
+        /// </summary>
+        public ICommand AddCmd => new DelegateCmd(Add_Command);
+
+        /// <summary>
+        /// 用户业务类实例
+        /// </summary>
+        private readonly IUserBll _userBll;
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="view"></param>
+        /// <param name="userBll"></param>
         [ImportingConstructor]
         public UserListViewModel(IUserListView view)
         {
+            //得到用户业务实例
+            _userBll = new UserBll(new UserDal());
+
             View = view;
             View.ViewModel = this;
-            //DeleteCommand = new DelegateCommand<ComboItem>(Delete_Command);
 
-            UserItems = new ObservableCollection<Entities.User>(bll.GetUsers());
+            //得到用户列表
+            UserItems = new ObservableCollection<Entities.User>(_userBll.GetList());
         }
 
+        /// <summary>
+        /// 得到用户列表
+        /// </summary>
         public ObservableCollection<Entities.User> UserItems
         {
             get { return _users; }
             set { SetProperty(ref _users, value); }
+        }
+
+        /// <summary>
+        /// 增加用户
+        /// </summary>
+        private void Add_Command()
+        {
+            _userBll.Add(new Entities.User(){Name = "First"});
         }
     }
 }
