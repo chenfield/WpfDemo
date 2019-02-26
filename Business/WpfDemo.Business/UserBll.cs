@@ -18,6 +18,7 @@ namespace WpfDemo.Business
         /// <summary>
         /// 用户数据类接口
         /// </summary>
+        //[Import(typeof(IUserDal))]
         private IUserDal _userDal;
 
         /// <summary>

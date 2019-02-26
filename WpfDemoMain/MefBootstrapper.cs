@@ -1,5 +1,8 @@
 ﻿using System;
+using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
+using System.IO;
+using System.Reflection;
 using System.Windows;
 using Autofac;
 using Prism.Modularity;
@@ -20,6 +23,16 @@ namespace WpfDemoMain
 
             //this.AggregateCatalog.Catalogs.Add(catalog);
             //AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ModuleUser).Assembly));
+
+            //加载Modules目录
+            if (Directory.Exists("./Modules"))
+            {
+                //this.AggregateCatalog.Catalogs.Add(new DirectoryCatalog("./Modules"));
+
+                var catalog = new DirectoryCatalog("./Modules");
+                var container = new CompositionContainer(catalog);
+                container.ComposeParts(this);
+            }
         }
 
         protected override void ConfigureContainer()

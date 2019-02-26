@@ -18,9 +18,9 @@ namespace WpfDemoMain
             builder.RegisterType<ShellViewModel>().As<IShellViewModel>();
 
             // register autofac module
-            builder.RegisterModule<ModuleUserConfig>();
-            builder.RegisterModule<ModuleDataConfiguration>();
-            builder.RegisterModule<ModuleBusinessConfiguration>();
+            //builder.RegisterModule<ModuleUserConfig>();
+            //builder.RegisterModule<ModuleDataConfiguration>();
+            //builder.RegisterModule<ModuleBusinessConfiguration>();
         }
 
 

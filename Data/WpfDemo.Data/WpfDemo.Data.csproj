@@ -80,7 +80,6 @@
   <ItemGroup>
     <Compile Include="EF6Context.cs" />
     <Compile Include="IUserDal.cs" />
-    <Compile Include="ModuleDataConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDal.cs" />
   </ItemGroup>

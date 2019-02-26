@@ -15,7 +15,7 @@ namespace WpfDemo.Entities
     public class User
     {
         [Key]
-        public int Id { get; set; }
+        public Int64 Id { get; set; }
 
         /// <summary>
         /// 用户名

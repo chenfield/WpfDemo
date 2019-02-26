@@ -15,5 +15,7 @@ namespace WpfDemo.UI.User
         /// 用户页面
         /// </summary>
         IUserListView View { set; get; }
+
+        void Load();
     }
 }

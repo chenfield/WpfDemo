@@ -1,4 +1,7 @@
 ﻿using System.ComponentModel.Composition;
+using System.ComponentModel.Composition.Hosting;
+using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
 using Autofac;
@@ -17,15 +20,15 @@ namespace WpfDemo.UI.User
     {
         [Import] private IUserListViewModel _viewModel;
 
+        [Import]
         IRegionManager _regionManager;
 
         // 当Prism加载该模块时，它将通过MEF实例化该类，MEF将注入一个Region Manager实例
-        [ImportingConstructor]
-        public ModuleUser(IComponentContext builder, 
-                          IRegionManager regionManager)
-        {
-            _regionManager = regionManager;
-        }
+        //[ImportingConstructor]
+        //public ModuleUser(IRegionManager regionManager)
+        //{
+        //    _regionManager = regionManager;
+        //}
 
         //private readonly IComponentContext _builder;
 
@@ -40,6 +43,7 @@ namespace WpfDemo.UI.User
         {
             //var obj = _builder.Resolve<IUserListViewModel>();
             _regionManager.RegisterViewWithRegion("MainRegion", () => _viewModel.View);
+            _viewModel.Load();
         }
     }
 }

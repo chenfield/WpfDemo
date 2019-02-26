@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
+using System.ComponentModel.Composition.Hosting;
+using System.IO;
 using System.Windows.Input;
 using Prism.Mvvm;
 using WpfDemo.Business;
@@ -19,6 +21,7 @@ namespace WpfDemo.UI.User
         /// <summary>
         /// 用户页面
         /// </summary>
+        //[Import]
         public IUserListView View { get; set; }
 
         /// <summary>
@@ -36,7 +39,7 @@ namespace WpfDemo.UI.User
         /// </summary>
         //[Import]
         public IUserBll _userBll;
-
+        
         /// <summary>
         /// 
         /// </summary>
@@ -45,6 +48,8 @@ namespace WpfDemo.UI.User
         [ImportingConstructor]
         public UserListViewModel(IUserListView view)
         {
+            Load();
+
             //得到用户业务实例
             _userBll = new UserBll(new UserDal());
 
@@ -53,6 +58,19 @@ namespace WpfDemo.UI.User
 
             //得到用户列表
             UserItems = new ObservableCollection<Entities.User>(_userBll.GetList());
+        }
+
+        public void Load()
+        {
+            //加载Modules目录
+            if (Directory.Exists("./Modules"))
+            {
+                //this.AggregateCatalog.Catalogs.Add(new DirectoryCatalog("./Modules"));
+
+                var catalog = new DirectoryCatalog("./Modules");
+                var container = new CompositionContainer(catalog);
+                container.ComposeParts(this);
+            }
         }
 
         /// <summary>
