@@ -38,7 +38,7 @@ namespace WpfDemo.UI.User
         /// 用户业务类实例
         /// </summary>
         [Import]
-        public IUserBll _userBll;
+        public Lazy<IUserBll> _userBll;
         
         /// <summary>
         /// 
@@ -53,14 +53,15 @@ namespace WpfDemo.UI.User
 
             View = view;
             View.ViewModel = this;
-
-          
         }
 
+        /// <summary>
+        /// 初始化
+        /// </summary>
         public void Load()
         {  
             //得到用户列表
-            UserItems = new ObservableCollection<Entities.User>(_userBll.GetList());
+            UserItems = new ObservableCollection<Entities.User>(_userBll.Value.GetList());
         }
 
         /// <summary>
@@ -77,9 +78,8 @@ namespace WpfDemo.UI.User
         /// </summary>
         private void Add_Command()
         {
-            _userBll.Add(new Entities.User(){Name = "First"});
-
-            UserItems = new ObservableCollection<Entities.User>(_userBll.GetList());
+            _userBll.Value.Add(new Entities.User(){Name = "First"});
+            Load();
         }
     }
 }

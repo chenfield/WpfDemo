@@ -12,7 +12,7 @@ namespace WpfDemo.Data
     /// <summary>
     /// 用户数据操作类 
     /// </summary>
-    [Export(typeof(IUserDal))]
+    [Export(typeof(IUserDal)), PartCreationPolicy(CreationPolicy.Shared)]
     public class UserDal : IUserDal
     {
         /// <summary>

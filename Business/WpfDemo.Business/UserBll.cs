@@ -12,14 +12,14 @@ namespace WpfDemo.Business
     /// <summary>
     /// 用户业务类
     /// </summary>
-    [Export(typeof(IUserBll))]
+    [Export(typeof(IUserBll)), PartCreationPolicy(CreationPolicy.Shared)]
     public class UserBll : IUserBll
     {
         /// <summary>
         /// 用户数据类接口
         /// </summary>
         [Import]
-        private IUserDal _userDal;
+        private Lazy<IUserDal> _userDal;
 
         ///// <summary>
         ///// 用户业务类初始化
@@ -38,7 +38,7 @@ namespace WpfDemo.Business
         /// <param name="user"></param>
         public void Add(User user)
         {
-            _userDal.Add(user);
+            _userDal.Value.Add(user);
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace WpfDemo.Business
         /// <returns></returns>
         public List<User> GetList()
         {
-            return _userDal.GetList();
+            return _userDal.Value.GetList();
         }
     }
 }
