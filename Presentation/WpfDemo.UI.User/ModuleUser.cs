@@ -15,6 +15,9 @@ using WpfDemo.Data;
 
 namespace WpfDemo.UI.User
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [ModuleExport(typeof(ModuleUser))]
     public class ModuleUser : IModule
     {
@@ -23,25 +26,8 @@ namespace WpfDemo.UI.User
         [Import]
         IRegionManager _regionManager;
 
-        // 当Prism加载该模块时，它将通过MEF实例化该类，MEF将注入一个Region Manager实例
-        //[ImportingConstructor]
-        //public ModuleUser(IRegionManager regionManager)
-        //{
-        //    _regionManager = regionManager;
-        //}
-
-        //private readonly IComponentContext _builder;
-
-        //public ModuleUser(IComponentContext builder, 
-        //                  IEventAggregator eventAggregator, 
-        //                  IRegionManager regionManager):base(eventAggregator, regionManager)
-        //{
-        //    _builder = builder;
-        //}
-
         public void Initialize()
         {
-            //var obj = _builder.Resolve<IUserListViewModel>();
             _regionManager.RegisterViewWithRegion("MainRegion", () => _viewModel.View);
             _viewModel.Load();
         }

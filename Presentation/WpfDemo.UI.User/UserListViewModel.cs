@@ -48,9 +48,6 @@ namespace WpfDemo.UI.User
         [ImportingConstructor]
         public UserListViewModel(IUserListView view)
         {
-            //得到用户业务实例
-            //_userBll = userBll;
-
             View = view;
             View.ViewModel = this;
         }
@@ -65,7 +62,7 @@ namespace WpfDemo.UI.User
         }
 
         /// <summary>
-        /// 得到用户列表
+        /// 用户列表
         /// </summary>
         public ObservableCollection<Entities.User> UserItems
         {
