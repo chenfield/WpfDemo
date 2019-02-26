@@ -18,19 +18,19 @@ namespace WpfDemo.Business
         /// <summary>
         /// 用户数据类接口
         /// </summary>
-        //[Import(typeof(IUserDal))]
+        [Import]
         private IUserDal _userDal;
 
-        /// <summary>
-        /// 用户业务类初始化
-        /// </summary>
-        /// <param name="userDal"></param>
+        ///// <summary>
+        ///// 用户业务类初始化
+        ///// </summary>
+        ///// <param name="userDal"></param>
 
-        [ImportingConstructor]
-        public UserBll(IUserDal userDal)
-        {
-            _userDal = userDal;
-        }
+        //[ImportingConstructor]
+        //public UserBll(IUserDal userDal)
+        //{
+        //    _userDal = userDal;
+        //}
 
         /// <summary>
         /// 增加用户

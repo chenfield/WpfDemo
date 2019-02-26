@@ -22,7 +22,6 @@ namespace WpfDemoMain
             //DirectoryCatalog catalog = new DirectoryCatalog("DirectoryModules");
 
             //this.AggregateCatalog.Catalogs.Add(catalog);
-            //AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ModuleUser).Assembly));
 
             //加载Modules目录
             if (Directory.Exists("./Modules"))
@@ -30,7 +29,10 @@ namespace WpfDemoMain
                 //this.AggregateCatalog.Catalogs.Add(new DirectoryCatalog("./Modules"));
 
                 var catalog = new DirectoryCatalog("./Modules");
-                var container = new CompositionContainer(catalog);
+                AggregateCatalog = new AggregateCatalog(catalog);
+                AggregateCatalog.Catalogs.Add(new AssemblyCatalog(Assembly.GetExecutingAssembly()));
+
+                var container = new CompositionContainer(this.AggregateCatalog);
                 container.ComposeParts(this);
             }
         }

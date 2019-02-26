@@ -23,13 +23,14 @@ namespace WpfDemoMain
         }
 
         [ImportingConstructor]
-        public ShellViewModel(IShellView view, IEventAggregator eventAggregator)
+        public ShellViewModel()
         {
-            View = view;
-            View.ViewModel = this;
+            //View = view;
+            //View.ViewModel = this;
             AppTitle = _appTitle;
         }
 
+        [Import]
         public IShellView View { get; set; }
     }
 }

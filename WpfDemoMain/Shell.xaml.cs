@@ -16,8 +16,8 @@ namespace WpfDemoMain
         {
             InitializeComponent();
         }
-        
-        //[Import]
+
+        [Import]
         public IShellViewModel ViewModel
         {
             set { DataContext = value; }

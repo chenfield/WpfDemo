@@ -37,7 +37,7 @@ namespace WpfDemo.UI.User
         /// <summary>
         /// 用户业务类实例
         /// </summary>
-        //[Import]
+        [Import]
         public IUserBll _userBll;
         
         /// <summary>
@@ -48,29 +48,19 @@ namespace WpfDemo.UI.User
         [ImportingConstructor]
         public UserListViewModel(IUserListView view)
         {
-            Load();
-
             //得到用户业务实例
-            _userBll = new UserBll(new UserDal());
+            //_userBll = userBll;
 
             View = view;
             View.ViewModel = this;
 
-            //得到用户列表
-            UserItems = new ObservableCollection<Entities.User>(_userBll.GetList());
+          
         }
 
         public void Load()
-        {
-            //加载Modules目录
-            if (Directory.Exists("./Modules"))
-            {
-                //this.AggregateCatalog.Catalogs.Add(new DirectoryCatalog("./Modules"));
-
-                var catalog = new DirectoryCatalog("./Modules");
-                var container = new CompositionContainer(catalog);
-                container.ComposeParts(this);
-            }
+        {  
+            //得到用户列表
+            UserItems = new ObservableCollection<Entities.User>(_userBll.GetList());
         }
 
         /// <summary>
