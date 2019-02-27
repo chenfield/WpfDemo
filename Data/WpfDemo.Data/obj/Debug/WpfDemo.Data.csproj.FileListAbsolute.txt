@@ -49,3 +49,6 @@ C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Microsoft.Practices.ServiceLocation.x
 C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.xml
 C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.Mef.Wpf.xml
 C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.Wpf.xml
+D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.Data.dll.config
+D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.Data.dll
+D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.Data.pdb

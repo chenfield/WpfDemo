@@ -114,5 +114,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\WpfDemo.Style\WpfDemo.Style.csproj">
+      <Project>{a65f8f77-d0ce-42b4-8548-feee10530331}</Project>
+      <Name>WpfDemo.Style</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,6 +8,8 @@
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
         mc:Ignorable="d"
         Title="{Binding AppTitle}"
+        Width="600"
+        Height="450"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>

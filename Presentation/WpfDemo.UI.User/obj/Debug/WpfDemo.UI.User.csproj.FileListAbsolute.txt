@@ -56,7 +56,6 @@ D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\EntityFrame
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User.csprojAssemblyReference.cache
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\UserListView.g.cs
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User_MarkupCompile.cache
-D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User_MarkupCompile.lref
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\UserListView.baml
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User.g.resources
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User.Properties.Resources.resources

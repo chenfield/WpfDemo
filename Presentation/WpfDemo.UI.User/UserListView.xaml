@@ -3,14 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:WpfDemo.UI.User"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             x:Name="UserList"
+             d:DesignHeight="350" d:DesignWidth="500">
     <StackPanel Orientation="Vertical">
-        <DataGrid AutoGenerateColumns="True" ItemsSource="{Binding UserItems}">
-            
+        <StackPanel Orientation="Horizontal">
+            <Button Content="增加" Command="{Binding AddCmd}"></Button>
+            <Button Content="编辑" Command="{Binding UpdateCmd}"></Button>
+            <Button Content="删除" Command="{Binding DeleteCmd}"></Button>
+        </StackPanel>
+
+        <DataGrid AutoGenerateColumns="False" 
+                  ItemsSource="{Binding UserItems}" 
+                  SelectedItem="{Binding SelectItem}" 
+                  CanUserAddRows="False" 
+                  SelectionMode="Single"
+                  SelectionUnit="FullRow" 
+                  CanUserReorderColumns="False"
+                  CanUserDeleteRows="False"
+                  ColumnHeaderHeight="30"
+                  Background="Transparent" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Name}" 
+                                    CanUserSort="False" 
+                                    ClipboardContentBinding="{x:Null}" 
+                                    Header="名称" 
+                                    Width="200"/>
+            </DataGrid.Columns>
+
         </DataGrid>
-        <!--<TextBox x:Name="tbxName"></TextBox>-->
-        <Button Height="30" Width="120" Content="Add" Command="{Binding AddCmd}"></Button>
-    </StackPanel>
+
+        <Popup x:Name="PopupDetails" 
+               AllowsTransparency="True" 
+               Placement="Center" 
+               PlacementTarget="{Binding ElementName=UserList}" >
+            <UniformGrid Rows="2" Background="Gray" Height="200" Width="400">
+                <TextBox x:Name="TbxName" Text="{Binding SelectItem.Name, Mode=TwoWay}"></TextBox>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="保存" Command="{Binding SaveCmd}"></Button>
+                    <Button Content="关闭" Command="{Binding CancelCmd}"></Button>
+                </StackPanel>
+            </UniformGrid>
+        </Popup>
+</StackPanel>
 </UserControl>

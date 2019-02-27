@@ -74,3 +74,6 @@ D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\obj\Debug\WpfDemoMain.csproj.CopyCompl
 D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\obj\Debug\WpfDemoMain.exe
 D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\obj\Debug\WpfDemoMain.pdb
 D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\obj\Debug\WpfDemoMain.csprojAssemblyReference.cache
+D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\obj\Debug\App.baml
+D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.Style.dll
+D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.Style.pdb

@@ -19,4 +19,3 @@ D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.c
 D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.csproj.CopyComplete
 D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.dll
 D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.pdb
-D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.csprojAssemblyReference.cache
