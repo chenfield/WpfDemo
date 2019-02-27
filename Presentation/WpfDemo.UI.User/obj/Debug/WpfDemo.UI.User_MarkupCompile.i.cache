@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\
+C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\
 WpfDemo.UI.User
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 12007606161
 
-122048364833
-70-337034284
+12-1619718340
+70849972028
 UserListView.xaml;
 
-True
+False
 

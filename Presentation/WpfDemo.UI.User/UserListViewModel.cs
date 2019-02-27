@@ -4,7 +4,7 @@ using System.ComponentModel.Composition;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
-using Prism.Commands;
+using System.Windows;
 using Prism.Mvvm;
 using WpfDemo.Business;
 using WpfDemo.Common;
@@ -126,9 +126,15 @@ namespace WpfDemo.UI.User
         /// </summary>
         private void Delete_Command()
         {
-            if (SelectItem == null) return;
-            //删除
+            if (SelectItem == null)
+            {
+                MessageBox.Show("请选择用户！");
+                return;
+            }
+
+            _userBll.Value.Delete(SelectItem);
             SelectItem = null;
+            Load();
         }
 
         /// <summary>
@@ -136,7 +142,12 @@ namespace WpfDemo.UI.User
         /// </summary>
         private void Update_Command()
         {
-            if (SelectItem == null) return;
+            if (SelectItem == null)
+            {
+                MessageBox.Show("请选择用户！");
+                return;
+            }
+
             PopupOpration(true);
         }
 
@@ -145,15 +156,25 @@ namespace WpfDemo.UI.User
         /// </summary>
         private void Save_Command()
         {
-            if (SelectItem == null)
+            var tbxName = ((UserControl)View).FindName("TbxName") as TextBox;
+
+            if (tbxName != null)
             {
-                var tbxName = ((UserControl) View).FindName("TbxName") as TextBox;
-                if (tbxName != null) _userBll.Value.Add(new Entities.User() {Name = tbxName.Text});
-            }
-            else
-            {
-                //更新
-                SelectItem = null;
+                Entities.User user;
+
+                if (SelectItem == null)
+                {
+                    user = new Entities.User();
+                    user.Name = tbxName.Text;
+                    _userBll.Value.Add(user);
+                }
+                else
+                {
+                    user = SelectItem;
+                    user.Name = tbxName.Text;
+                    _userBll.Value.Update(user);
+                    SelectItem = null;
+                }
             }
 
             PopupOpration(false);
@@ -166,6 +187,8 @@ namespace WpfDemo.UI.User
         private void Cancel_Command()
         {
             PopupOpration(false);
+            SelectItem = null;
+            Load();
         }
 
         /// <summary>

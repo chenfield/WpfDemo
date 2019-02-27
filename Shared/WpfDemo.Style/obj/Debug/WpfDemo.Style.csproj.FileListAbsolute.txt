@@ -30,3 +30,14 @@ C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.csproj.GenerateResou
 C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.csproj.CoreCompileInputs.cache
 C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.dll
 C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.pdb
+C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\CommonServiceLocator.dll
+C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Prism.dll
+C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Prism.pdb
+C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Prism.Unity.Wpf.dll
+C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Prism.Unity.Wpf.pdb
+C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Prism.Wpf.dll
+C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Prism.Wpf.pdb
+C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\System.Windows.Interactivity.dll
+C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Unity.Abstractions.dll
+C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Unity.Container.dll
+C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.csproj.CopyComplete

@@ -33,9 +33,25 @@ namespace WpfDemo.Business
         /// 增加用户
         /// </summary>
         /// <param name="user"></param>
-        public void Add(User user)
+        public int? Add(User user)
         {
-            _userDal.Value.Add(user);
+            if (user == null)
+                throw new Exception("不能增加空用户！");
+
+            return _userDal.Value.Add(user);
+        }
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public int Delete(User user)
+        {
+            if (user == null)
+                throw new Exception("不能删除空用户！");
+
+            return _userDal.Value.Delete(user);
         }
 
         /// <summary>
@@ -45,6 +61,19 @@ namespace WpfDemo.Business
         public List<User> GetList()
         {
             return _userDal.Value.GetList();
+        }
+
+        /// <summary>
+        /// 更新
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public int Update(User user)
+        {
+            if (user == null)
+                throw new Exception("不能更新空用户！");
+
+            return _userDal.Value.Update(user);
         }
     }
 }

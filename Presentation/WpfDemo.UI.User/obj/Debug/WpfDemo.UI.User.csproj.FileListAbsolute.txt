@@ -68,3 +68,6 @@ C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\System.Data.SQLite.xml
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\System.Data.SQLite.dll.config
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Dapper.SimpleCRUD.pdb
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Dapper.SimpleCRUD.xml
+C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Modules\WpfDemo.UI.User.dll.config
+C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Modules\WpfDemo.UI.User.dll
+C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Modules\WpfDemo.UI.User.pdb

@@ -15,12 +15,32 @@ namespace WpfDemo.Data
         /// 增加用户
         /// </summary>
         /// <param name="user"></param>
-        public void Add(User user)
+        public int? Add(User user)
         {
+            int? result;
+
             using (var connection = Connectionobj.GetOpenConnection())
             {
-                connection.Insert(user);
+                result = connection.Insert(user);
             }
+
+            return result;
+        }
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="user"></param>
+        public int Delete(User user)
+        {
+            int result;
+
+            using (var connection = Connectionobj.GetOpenConnection())
+            {
+               result =  connection.Delete(user);
+            }
+
+            return result;
         }
 
         /// <summary>
@@ -37,6 +57,22 @@ namespace WpfDemo.Data
             }
 
             return items;
+        }
+
+        /// <summary>
+        /// 更新
+        /// </summary>
+        /// <param name="user"></param>
+        public int Update(User user)
+        {
+            int result;
+
+            using (var connection = Connectionobj.GetOpenConnection())
+            {
+                result = connection.Update(user);
+            }
+
+            return result;
         }
     }
 }
