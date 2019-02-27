@@ -52,3 +52,6 @@ C:\pro\WpfDemo\Data\WpfDemo.Data\bin\Debug\Prism.Wpf.xml
 D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.Data.dll.config
 D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.Data.dll
 D:\CHENWEIBO\Projects\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.Data.pdb
+C:\pro\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.Data.dll.config
+C:\pro\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.Data.dll
+C:\pro\WpfDemo\WpfDemoMain\bin\Debug\WpfDemo.Data.pdb

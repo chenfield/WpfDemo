@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using Dapper;
 using WpfDemo.Entities;
 using System.ComponentModel.Composition;
 
@@ -17,10 +17,9 @@ namespace WpfDemo.Data
         /// <param name="user"></param>
         public void Add(User user)
         {
-            using (EF6Context context = new EF6Context())
+            using (var connection = Connectionobj.GetOpenConnection())
             {
-                context.Users.Add(new User { Name = user.Name });
-                context.SaveChanges();
+                connection.Insert(user);
             }
         }
 
@@ -32,9 +31,9 @@ namespace WpfDemo.Data
         {
             List<User> items;
 
-            using (EF6Context context = new EF6Context())
+            using (var connection = Connectionobj.GetOpenConnection())
             {
-                items = context.Set<User>().ToList();
+                items = connection.GetList<User>(new { }).AsList();
             }
 
             return items;

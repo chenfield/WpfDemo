@@ -19,3 +19,14 @@ D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Unity.Container.dll
 D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.csproj.CopyComplete
 D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.dll
 D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.pdb
+C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\WpfDemo.Style.dll
+C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\WpfDemo.Style.pdb
+C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.csprojAssemblyReference.cache
+C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\Generic.baml
+C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style_MarkupCompile.cache
+C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.g.resources
+C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.Properties.Resources.resources
+C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.csproj.GenerateResource.cache
+C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.csproj.CoreCompileInputs.cache
+C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.dll
+C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.pdb
