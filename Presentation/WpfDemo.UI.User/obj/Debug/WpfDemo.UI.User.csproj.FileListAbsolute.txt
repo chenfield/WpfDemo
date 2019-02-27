@@ -35,8 +35,6 @@ C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User.dll
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User.pdb
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.UI.User.dll
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.UI.User.pdb
-D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Autofac.dll
-D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Autofac.Wpf.dll
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.dll
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Mef.Wpf.dll
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Wpf.dll
@@ -49,10 +47,7 @@ D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\EntityFrame
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Business.pdb
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Entities.pdb
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Common.pdb
-D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Autofac.xml
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.xml
-D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Autofac.Wpf.xml
-D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Autofac.Wpf.dll.config
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Mef.Wpf.xml
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Wpf.xml
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Data.pdb
@@ -72,7 +67,6 @@ D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User.pdb
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.UI.User.dll.config
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\CommonServiceLocator.dll
-D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Autofac.pdb
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.UI.User.dll.config
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\CommonServiceLocator.dll
 C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Autofac.Wpf.dll

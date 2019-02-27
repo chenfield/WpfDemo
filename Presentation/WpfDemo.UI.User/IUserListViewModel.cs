@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace WpfDemo.UI.User
 {
     /// <summary>
@@ -16,6 +11,9 @@ namespace WpfDemo.UI.User
         /// </summary>
         IUserListView View { set; get; }
 
+        /// <summary>
+        /// 数据调入
+        /// </summary>
         void Load();
     }
 }

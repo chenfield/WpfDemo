@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace WpfDemoMain
 {
+    /// <summary>
+    /// 页面类
+    /// </summary>
     public interface IShellView
     {
+        /// <summary>
+        /// 操作类
+        /// </summary>
         IShellViewModel ViewModel { set; get; }
     }
 }

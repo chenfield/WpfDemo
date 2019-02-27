@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
-using System.ComponentModel.Composition.Hosting;
-using System.IO;
 using System.Windows.Input;
 using Prism.Mvvm;
 using WpfDemo.Business;
 using WpfDemo.Common;
-using WpfDemo.Data;
 
 namespace WpfDemo.UI.User
 {
@@ -38,13 +34,12 @@ namespace WpfDemo.UI.User
         /// 用户业务类实例
         /// </summary>
         [Import]
-        public Lazy<IUserBll> _userBll;
+        private Lazy<IUserBll> _userBll;
         
         /// <summary>
-        /// 
+        /// 初始化
         /// </summary>
         /// <param name="view"></param>
-        /// <param name="userBll"></param>
         [ImportingConstructor]
         public UserListViewModel(IUserListView view)
         {
@@ -53,7 +48,7 @@ namespace WpfDemo.UI.User
         }
 
         /// <summary>
-        /// 初始化
+        /// 数据调入
         /// </summary>
         public void Load()
         {  

@@ -7,6 +7,10 @@ namespace WpfDemoMain
     /// </summary>
     public partial class App : Application
     {
+        /// <summary>
+        /// 起动方法
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);

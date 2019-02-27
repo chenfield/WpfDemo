@@ -1,34 +1,26 @@
 ﻿using System.ComponentModel.Composition;
-using System.ComponentModel.Composition.Hosting;
-using System.IO;
-using System.Reflection;
-using System.Windows;
-using System.Windows.Media;
-using Autofac;
-using Prism.Events;
 using Prism.Mef.Modularity;
-using Prism.Modularity;
-using Prism.Regions;
-using WpfDemo.Business;
 using WpfDemo.Common;
-using WpfDemo.Data;
 
 namespace WpfDemo.UI.User
 {
     /// <summary>
-    /// 
+    /// 用户组件类
     /// </summary>
     [ModuleExport(typeof(ModuleUser))]
-    public class ModuleUser : IModule
+    public class ModuleUser : AModule
     {
+        /// <summary>
+        /// 用户操作类
+        /// </summary>
         [Import] private IUserListViewModel _viewModel;
 
-        [Import]
-        IRegionManager _regionManager;
-
-        public void Initialize()
+        /// <summary>
+        /// 用户组件初始调入
+        /// </summary>
+        public override void Initialize()
         {
-            _regionManager.RegisterViewWithRegion("MainRegion", () => _viewModel.View);
+            RegionManager.RegisterViewWithRegion("MainRegion", () => _viewModel.View);
             _viewModel.Load();
         }
     }

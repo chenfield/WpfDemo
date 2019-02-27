@@ -4,22 +4,17 @@ using System.ComponentModel.Composition.Hosting;
 using System.IO;
 using System.Reflection;
 using System.Windows;
-using Autofac;
 using Prism.Modularity;
-using WpfDemo.Business;
-using WpfDemo.Data;
-using WpfDemo.UI.User;
 
 namespace WpfDemoMain
 {
     /// <summary>
-    /// 
+    /// MEF Bootstrapper
     /// </summary>
     public class MefBootstrapper : Prism.Mef.MefBootstrapper
     {
         /// <summary>
-        /// 
-        /// 
+        /// 加载组件
         /// </summary>
         protected override void ConfigureAggregateCatalog()
         {
@@ -31,23 +26,17 @@ namespace WpfDemoMain
             {
                 var catalog = new DirectoryCatalog("./Modules");
                 AggregateCatalog = new AggregateCatalog(catalog);
+
+                //加载主项目类
                 AggregateCatalog.Catalogs.Add(new AssemblyCatalog(Assembly.GetExecutingAssembly()));
 
                 var container = new CompositionContainer(this.AggregateCatalog);
                 container.ComposeParts(this);
             }
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        protected override void ConfigureContainer()
-        {
-            base.ConfigureContainer();
-        }
         
         /// <summary>
-        /// 
+        /// 注册WPF组件
         /// </summary>
         /// <returns></returns>
         protected override IModuleCatalog CreateModuleCatalog()
@@ -57,7 +46,7 @@ namespace WpfDemoMain
         }
 
         /// <summary>
-        /// 
+        /// 建立起动页面
         /// </summary>
         /// <returns></returns>
         protected override DependencyObject CreateShell()
@@ -67,7 +56,7 @@ namespace WpfDemoMain
         }
 
         /// <summary>
-        /// 
+        /// 设置主窗口打开页面
         /// </summary>
         protected override void InitializeShell()
         {
