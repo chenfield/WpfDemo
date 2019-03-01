@@ -6,9 +6,7 @@ C:\pro\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.dll
 C:\pro\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.pdb
 D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\bin\Debug\WpfDemo.Entities.dll
 D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\bin\Debug\WpfDemo.Entities.pdb
-D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\bin\Debug\EntityFramework.dll
-D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\bin\Debug\EntityFramework.xml
 D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.csproj.CoreCompileInputs.cache
-D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.csproj.CopyComplete
 D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.dll
 D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.pdb
+D:\CHENWEIBO\Projects\WpfDemo\Data\WpfDemo.Entities\obj\Debug\WpfDemo.Entities.csprojAssemblyReference.cache

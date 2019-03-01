@@ -292,7 +292,7 @@
   },
   "libraries": {
     "CommonServiceLocator/2.0.4": {
-      "sha512": "YpXfV5l6kv1iQRDfhQnN4RxocbnNehU/rAAS62IlaQUTAKN3WoUbtx9MHwE98Pb09mBemSs4xhVqFhXq27rjxw==",
+      "sha512": "PUYeC0w+gGG9+T1/sREZaKQAXErlakvhHwEmxMmtIVJeULBB7QdF80IXkVFeu8pz4Nzx81N2zfwk4WaVn3PeXg==",
       "type": "package",
       "path": "commonservicelocator/2.0.4",
       "files": [
@@ -311,7 +311,7 @@
       ]
     },
     "Prism.Core/7.1.0.431": {
-      "sha512": "l4sBztXr1d2aJ1Ub5OKcd8dkf18UV7k+DWRbi0uen8y0pqb0tH+OC1/B35ZvaxMNlCtl1VZYbeq6wypdcrt92A==",
+      "sha512": "tBkEf4cDYn2oQfW1wPem4jJK/H1Z4mJsnndO04n2oZyIql7Bj3OVlpfQ6vbPgbtlkEN0oyn02XVurZba3DYqmQ==",
       "type": "package",
       "path": "prism.core/7.1.0.431",
       "files": [
@@ -339,7 +339,7 @@
       ]
     },
     "Prism.Unity/7.1.0.431": {
-      "sha512": "ZabaaPDQlEDpViRQIBslWdqZHz9duytDNdAqL2iLnPXhwl24qM7KuIrW9t6LEp1QVABBD66jKwY48BDsDh8IPg==",
+      "sha512": "75yEnHlm85zqmksOP3AJIGL7T+eyeo4zNje3pqJLs3KgeIewVC1ShtyuVF7EOfETqmGPL4wyO7acwOXXKE2ouw==",
       "type": "package",
       "path": "prism.unity/7.1.0.431",
       "files": [
@@ -353,7 +353,7 @@
       ]
     },
     "Prism.Wpf/7.1.0.431": {
-      "sha512": "vcSet3jJxN4Ypf4GLPHvIYz3xQJV1E1e+uTJrsw6FkZd0mrjc0vUTZciQ3PoMRzGr5pf3iktMtScmCQhBJZMIw==",
+      "sha512": "wcWAJ99CiiUkZXMmIXhVHPQhwgjFHHH/1j1VfBHi1uBOZM04WIxwP6FoiIpCch8LNBq/VYQAddlfbkw6i8Wbdg==",
       "type": "package",
       "path": "prism.wpf/7.1.0.431",
       "files": [
@@ -368,7 +368,7 @@
       ]
     },
     "Unity.Abstractions/3.3.1": {
-      "sha512": "6Noq6W6cnB+TFgCf9FfgCN9wTVOiKI0eC1tl4dvbA3xg4ZSULKlpXMf2TVM945y/c1KvEdrq19joxHBOBB8rJA==",
+      "sha512": "2dFFUnyzSHDgyqVeZBo4X1M3mxh+XCdK66aiuALuPWwXsqmGuGfqD0/sbDNnA5FGYnqby4Fb+4X/JqoN+NjhuA==",
       "type": "package",
       "path": "unity.abstractions/3.3.1",
       "files": [
@@ -387,7 +387,7 @@
       ]
     },
     "Unity.Container/5.8.11": {
-      "sha512": "DGjzMnWjS4DvhXzVLnz2HfxEtwgPmfTwK31HILkL9ySiTSsshWWCGixfOo/nzcVzbBxeIwFbZ44jDqCqPMNENA==",
+      "sha512": "8XEfzRwoX/9NtHU4WapD3DdCxBQumIoDIIEBbqElhr2Y5HwokaAkiomuIKvVW9znNDtv1az3i1xKM6usiiWjqg==",
       "type": "package",
       "path": "unity.container/5.8.11",
       "files": [
@@ -412,20 +412,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chen\\.nuget\\packages\\": {}
+    "C:\\Users\\CuiYu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\pro\\WpfDemo\\Shared\\WpfDemo.Style\\WpfDemo.Style.csproj",
+      "projectUniqueName": "D:\\CHENWEIBO\\Projects\\WpfDemo\\Shared\\WpfDemo.Style\\WpfDemo.Style.csproj",
       "projectName": "WpfDemo.Style",
-      "projectPath": "C:\\pro\\WpfDemo\\Shared\\WpfDemo.Style\\WpfDemo.Style.csproj",
-      "packagesPath": "C:\\Users\\chen\\.nuget\\packages\\",
-      "outputPath": "C:\\pro\\WpfDemo\\Shared\\WpfDemo.Style\\obj\\",
+      "projectPath": "D:\\CHENWEIBO\\Projects\\WpfDemo\\Shared\\WpfDemo.Style\\WpfDemo.Style.csproj",
+      "packagesPath": "C:\\Users\\CuiYu\\.nuget\\packages\\",
+      "outputPath": "D:\\CHENWEIBO\\Projects\\WpfDemo\\Shared\\WpfDemo.Style\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\chen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\CuiYu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

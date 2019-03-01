@@ -43,7 +43,10 @@ namespace WpfDemo.Common
             if (!RegionManager.Regions.ContainsRegionWithName(regionName)) return;
             
             var region = RegionManager.Regions[regionName];
-            region.RemoveAll();
+            //region.RemoveAll();
+
+            if (!region.Views.Contains(newCtrl))
+                RegionManager.AddToRegion(regionName, newCtrl);
 
             RegionManager.RegisterViewWithRegion(regionName, () => newCtrl);
             region.Activate(newCtrl);

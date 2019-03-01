@@ -1,8 +1,9 @@
-﻿<UserControl x:Class="WpfDemo.UI.User.UserListView"
+﻿<UserControl x:Class="WpfDemo.UI.User.Views.UserListView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:common="clr-namespace:WpfDemo.Common;assembly=WpfDemo.Common"
              mc:Ignorable="d" 
              x:Name="UserList"
              d:DesignHeight="350" d:DesignWidth="500">
@@ -33,7 +34,7 @@
 
         </DataGrid>
 
-        <Popup x:Name="PopupDetails" 
+        <common:NonAlwaysTopmostPopup x:Name="PopupDetails" 
                AllowsTransparency="True" 
                Placement="Center" 
                PlacementTarget="{Binding ElementName=UserList}" >
@@ -44,6 +45,6 @@
                     <Button Content="关闭" Command="{Binding CancelCmd}"></Button>
                 </StackPanel>
             </UniformGrid>
-        </Popup>
+        </common:NonAlwaysTopmostPopup>
 </StackPanel>
 </UserControl>

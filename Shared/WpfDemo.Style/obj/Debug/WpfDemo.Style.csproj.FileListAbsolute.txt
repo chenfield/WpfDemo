@@ -6,17 +6,6 @@ D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.cspro
 D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.csproj.CoreCompileInputs.cache
 D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\WpfDemo.Style.dll
 D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\WpfDemo.Style.pdb
-D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\CommonServiceLocator.dll
-D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Prism.dll
-D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Prism.pdb
-D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Prism.Unity.Wpf.dll
-D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Prism.Unity.Wpf.pdb
-D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Prism.Wpf.dll
-D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Prism.Wpf.pdb
-D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\System.Windows.Interactivity.dll
-D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Unity.Abstractions.dll
-D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Unity.Container.dll
-D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.csproj.CopyComplete
 D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.dll
 D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.pdb
 C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\WpfDemo.Style.dll
@@ -41,3 +30,4 @@ C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\System.Windows.Interactivity.dll
 C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Unity.Abstractions.dll
 C:\pro\WpfDemo\Shared\WpfDemo.Style\bin\Debug\Unity.Container.dll
 C:\pro\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.csproj.CopyComplete
+D:\CHENWEIBO\Projects\WpfDemo\Shared\WpfDemo.Style\obj\Debug\WpfDemo.Style.csprojAssemblyReference.cache

@@ -1,7 +1,8 @@
-﻿using System.Windows.Controls;
-using System.ComponentModel.Composition;
+﻿using System.ComponentModel.Composition;
+using System.Windows.Controls;
+using WpfDemo.UI.User.Interface;
 
-namespace WpfDemo.UI.User
+namespace WpfDemo.UI.User.Views
 {
     /// <summary>
     /// 用户列表页

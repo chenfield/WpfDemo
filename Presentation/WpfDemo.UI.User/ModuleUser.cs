@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.Composition;
 using Prism.Mef.Modularity;
 using WpfDemo.Common;
+using WpfDemo.UI.User.Interface;
 
 namespace WpfDemo.UI.User
 {

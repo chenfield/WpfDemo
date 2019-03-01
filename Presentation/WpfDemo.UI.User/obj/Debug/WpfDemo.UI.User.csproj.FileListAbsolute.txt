@@ -37,7 +37,6 @@ D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Bus
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Common.dll
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Entities.dll
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Data.dll
-D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\EntityFramework.dll
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Business.pdb
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Entities.pdb
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Common.pdb
@@ -46,11 +45,8 @@ D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Mef.W
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Prism.Wpf.xml
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Data.pdb
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\WpfDemo.Data.dll.config
-D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\EntityFramework.xml
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User.csprojAssemblyReference.cache
-D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\UserListView.g.cs
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User_MarkupCompile.cache
-D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\UserListView.baml
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User.g.resources
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User.Properties.Resources.resources
 D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User.csproj.GenerateResource.cache
@@ -71,3 +67,14 @@ C:\pro\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Dapper.SimpleCRUD.xml
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Modules\WpfDemo.UI.User.dll.config
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Modules\WpfDemo.UI.User.dll
 C:\pro\WpfDemo\WpfDemoMain\bin\Debug\Modules\WpfDemo.UI.User.pdb
+D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\System.Data.SQLite.dll
+D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Dapper.SimpleCRUD.dll
+D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\System.Data.SQLite.xml
+D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\System.Data.SQLite.dll.config
+D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Dapper.SimpleCRUD.pdb
+D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\bin\Debug\Dapper.SimpleCRUD.xml
+D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\Views\UserListView.baml
+D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\Views\EditUserView.g.cs
+D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\Views\UserListView.g.cs
+D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\WpfDemo.UI.User_MarkupCompile.lref
+D:\CHENWEIBO\Projects\WpfDemo\Presentation\WpfDemo.UI.User\obj\Debug\Views\EditUserView.baml

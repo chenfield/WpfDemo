@@ -1,32 +1,70 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
-using System.Windows;
 using Prism.Mvvm;
 using WpfDemo.Business;
 using WpfDemo.Common;
+using WpfDemo.UI.User.Interface;
 
-namespace WpfDemo.UI.User
+namespace WpfDemo.UI.User.ViewModels
 {
     /// <summary>
     /// 操作用户
     /// </summary>
     [Export(typeof(IUserListViewModel))]
-    public class UserListViewModel : BindableBase, IUserListViewModel
+    public class UserListViewModel : ViewModelBase, IUserListViewModel
     {
         /// <summary>
         /// 用户页面
         /// </summary>
-        //[Import]
         public IUserListView View { get; set; }
+
+        /// <summary>
+        /// 用户业务类实例
+        /// </summary>
+        [Import] private Lazy<IUserBll> _userBll;
+
+        /// <summary>
+        /// 编辑用户页面操作类
+        /// </summary>
+        [Import] private IEditUserViewModel _editUserModel;
+
+        /// <summary>
+        /// 弹出窗口
+        /// </summary>
+        private readonly Popup _popup;
 
         /// <summary>
         /// 用户列表
         /// </summary>
         private ObservableCollection<Entities.User> _users = new ObservableCollection<Entities.User>();
+        
+        /// <summary>
+        /// 用户列表
+        /// </summary>
+        public ObservableCollection<Entities.User> UserItems
+        {
+            get { return _users; }
+            set { SetProperty(ref _users, value); }
+        }
+
+        /// <summary>
+        /// 选中用户
+        /// </summary>
+        private Entities.User _selectItem;
+
+        /// <summary>
+        /// 选中的用户
+        /// </summary>
+        public Entities.User SelectItem
+        {
+            get { return _selectItem; }
+            set { SetProperty(ref _selectItem, value); }
+        }
 
         #region  事件绑定
 
@@ -56,32 +94,7 @@ namespace WpfDemo.UI.User
         public ICommand CancelCmd => new DelegateCmd(Cancel_Command);
         
         #endregion
-
-        /// <summary>
-        /// 选中用户
-        /// </summary>
-        private Entities.User _selectItem;
-
-        /// <summary>
-        /// 选中的用户
-        /// </summary>
-        public Entities.User SelectItem
-        {
-            get { return _selectItem; }
-            set { SetProperty(ref _selectItem, value); }
-        }
-
-        /// <summary>
-        /// 用户业务类实例
-        /// </summary>
-        [Import]
-        private Lazy<IUserBll> _userBll;
-
-        /// <summary>
-        /// 弹出窗口
-        /// </summary>
-        private readonly Popup _popup;
-
+        
         /// <summary>
         /// 初始化
         /// </summary>
@@ -101,15 +114,6 @@ namespace WpfDemo.UI.User
         {  
             //得到用户列表
             UserItems = new ObservableCollection<Entities.User>(_userBll.Value.GetList());
-        }
-
-        /// <summary>
-        /// 用户列表
-        /// </summary>
-        public ObservableCollection<Entities.User> UserItems
-        {
-            get { return _users; }
-            set { SetProperty(ref _users, value); }
         }
 
         /// <summary>
@@ -148,7 +152,8 @@ namespace WpfDemo.UI.User
                 return;
             }
 
-            PopupOpration(true);
+            ReplaceMainRegion(_editUserModel.View as ContentControl);
+            _editUserModel.SelectItem = SelectItem;
         }
 
         /// <summary>
@@ -160,21 +165,15 @@ namespace WpfDemo.UI.User
 
             if (tbxName != null)
             {
-                Entities.User user;
+                if (string.IsNullOrEmpty(tbxName.Text))
+                {
+                    MessageBox.Show("名称不能为空！");
+                    return;
+                }
 
-                if (SelectItem == null)
-                {
-                    user = new Entities.User();
-                    user.Name = tbxName.Text;
-                    _userBll.Value.Add(user);
-                }
-                else
-                {
-                    user = SelectItem;
-                    user.Name = tbxName.Text;
-                    _userBll.Value.Update(user);
-                    SelectItem = null;
-                }
+                Entities.User user = new Entities.User();
+                user.Name = tbxName.Text;
+                _userBll.Value.Add(user);
             }
 
             PopupOpration(false);

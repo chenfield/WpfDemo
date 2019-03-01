@@ -14,11 +14,9 @@ D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Busine
 D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Business.pdb
 D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Data.dll
 D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Entities.dll
-D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\EntityFramework.dll
 D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Data.pdb
 D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Data.dll.config
 D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\WpfDemo.Entities.pdb
-D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\EntityFramework.xml
 D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\obj\Debug\WpfDemo.Business.csprojAssemblyReference.cache
 D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\obj\Debug\WpfDemo.Business.csproj.CoreCompileInputs.cache
 D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\obj\Debug\WpfDemo.Business.csproj.CopyComplete
@@ -30,3 +28,9 @@ C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\System.Data.SQLite.xml
 C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\System.Data.SQLite.dll.config
 C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\Dapper.SimpleCRUD.pdb
 C:\pro\WpfDemo\Business\WpfDemo.Business\bin\Debug\Dapper.SimpleCRUD.xml
+D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\System.Data.SQLite.dll
+D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\Dapper.SimpleCRUD.dll
+D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\System.Data.SQLite.xml
+D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\System.Data.SQLite.dll.config
+D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\Dapper.SimpleCRUD.pdb
+D:\CHENWEIBO\Projects\WpfDemo\Business\WpfDemo.Business\bin\Debug\Dapper.SimpleCRUD.xml

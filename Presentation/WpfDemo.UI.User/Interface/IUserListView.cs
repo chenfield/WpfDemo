@@ -1,5 +1,5 @@
 ﻿
-namespace WpfDemo.UI.User
+namespace WpfDemo.UI.User.Interface
 {
     /// <summary>
     /// 用户页面接口
